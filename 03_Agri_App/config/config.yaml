@@ -31,33 +31,10 @@ data_processing:
   q1_emb_bert: "artifacts/03_processed_data/05_q1_emb_bert.npy"
   q2_emb_bert: "artifacts/03_processed_data/05_q2_emb_bert.npy"
   
-training:
-  root_dir: "artifacts/05_training"
-  model_dir: "artifacts/04_models"
-  y_path: "artifacts/02_preprocessed_data/y.csv"
-  emb_matrix: "artifacts/03_processed_data/emb_matrix.csv"
-  emb_data_own: "artifacts/03_processed_data/04_emb_data_own.csv"
-  q1_emb_own: "artifacts/03_processed_data/04_q1_emb_own.npy"
-  q2_emb_own: "artifacts/03_processed_data/04_q2_emb_own.npy"
-  emb_data_bert: "artifacts/03_processed_data/05_emb_data_bert.csv"
-  q1_emb_bert: "artifacts/03_processed_data/05_q1_emb_bert.npy"
-  q2_emb_bert: "artifacts/03_processed_data/05_q2_emb_bert.npy"
-  trained_model_with_own_emb: "artifacts/04_models/05_trained_model_with_own_emb.h5"
-  trained_model_with_bert_emb: "artifacts/04_models/05_trained_model_with_bert_emb.h5"
-  own_val_report: "artifacts/05_training/own_val_report.json"
-  bert_val_report: "artifacts/05_training/bert_val_report.json"
+estimate_prep:
 
-evaluation:
-  root_dir: "artifacts/06_evaluation"
-  test_dir: "artifacts/01_data_ingestion/test.csv"
-  evaluation_report: "artifacts/06_evaluation/evaluation_report.yaml"
-  mlflow_uri: "http://localhost:5000"
 
-prediction:
-  root_dir: "artifacts/07_prediction"
-  chatwords_file: "artifacts/01_data_ingestion/chatwords.yaml"
-  word2idx_path: "artifacts/04_models/01_word2idx.pkl"
-  emb_matrix: "artifacts/03_processed_data/03_emb_matrix.csv"
-  bert_emb_model: "artifacts/04_models/03_bert_emb_model.h5"
-  trained_model_with_own_emb: "artifacts/04_models/05_trained_model_with_own_emb.h5"
-  trained_model_with_bert_emb: "artifacts/04_models/05_trained_model_with_bert_emb.h5"
+annex_prep:
+
+
+chart_prep:
