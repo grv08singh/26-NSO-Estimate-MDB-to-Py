@@ -1,0 +1,19 @@
+[2026-11-22 11:43:04,770] 31 root - INFO - Starting Data Ingestion pipeline
+[2026-11-22 11:43:04,770] 37 root - INFO - Input path: 01_raw_data
+[2026-11-22 11:43:04,770] 38 root - INFO - Output path: artifacts\a01_ingested_data\RC7_imported.csv
+[2026-11-22 11:43:04,770] 39 root - INFO - MDB table: Sch20RC7
+[2026-11-22 11:43:04,770] 73 root - INFO - Entered Method create_directories
+[2026-11-22 11:43:04,771] 77 root - INFO - Directory created: artifacts\a01_ingested_data
+[2026-11-22 11:43:04,771] 78 root - INFO - Exited Method create_directories
+[2026-11-22 11:43:04,771] 48 root - INFO - Entered ingest_data method of DataIngestion class
+[2026-11-22 11:43:04,771] 27 root - INFO - Discovered 1 data files in 01_raw_data
+[2026-11-22 11:43:04,772] 129 root - INFO - Entered Method load_mdb
+[2026-11-22 11:43:05,399] 139 root - INFO - MDB table 'Sch20RC7' loaded from 01_raw_data\NSSAS2025.mdb
+[2026-11-22 11:43:05,402] 144 root - INFO - Exited Method load_mdb
+[2026-11-22 11:43:05,403] 44 root - INFO - Loaded 1947 rows from NSSAS2025.mdb (source=mdb)
+[2026-11-22 11:43:05,403] 70 root - INFO - Exited ingest_data method of DataIngestion class (total rows: 1947)
+[2026-11-22 11:43:05,404] 99 root - INFO - Entered Method save_csv
+[2026-11-22 11:43:05,427] 108 root - INFO - CSV file saved at artifacts\a01_ingested_data\RC7_imported.csv (1947 rows)
+[2026-11-22 11:43:05,428] 112 root - INFO - Exited Method save_csv
+[2026-11-22 11:43:05,428] 51 root - INFO - Saved ingested data to artifacts\a01_ingested_data\RC7_imported.csv (shape: (1947, 62))
+[2026-11-22 11:43:05,428] 53 root - INFO - Completed Data Ingestion pipeline

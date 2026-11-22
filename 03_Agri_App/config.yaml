@@ -2,13 +2,16 @@ artifacts_root: "artifacts"
 
 data_ingestion:
   raw_data_path: "01_raw_data"
-  ingested_data_path: "artifacts/a01_ingested_data/RC7_imported.csv"
+  ingested_data_path: "artifacts/a01_ingested_data/ingested_data.csv"
 
 data_preprocessing:
+  rc7_path: "artifacts/a02_preprocessed_data/RC7_preprocessed.csv"
 
-data_processing:
+data_correction:
+  rc7_path: "artifacts/a03_corrected_data/RC7_corrected.csv"
   
 estimate_prep:
+  estimates_table_path: "artifacts/a04_estimates/all_estimates.csv"
 
 annex_prep:
 
