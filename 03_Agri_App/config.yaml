@@ -1,27 +1,13 @@
 artifacts_root: "artifacts"
 
 ML_ingestion:
-  raw_ML_path: "01_raw_data/00_MasterList"
+  raw_ML_path: "01_raw_data/r0_MasterList"
   ingested_ML_path: "artifacts/a1_ingested_ML/ingested_ML.csv"
 
 data_ingestion:
-  raw_data_path: "01_raw_data/01_RawSchedules"
-  ingested_data_path: "artifacts/a2_ingested_data/ingested_data.csv"
+  raw_data_path: "01_raw_data/r1_RawSchedules"
+  ingested_data_path: "artifacts/a2_ingested_data/ingested_RC7.csv"
 
 data_preprocessing:
-  rc7_path: "artifacts/a3_processed_data/RC7_preprocessed.csv"
+  preprocessed_RC7_path: "artifacts/a3_processed_data/preprocessed_RC7.csv"
 
-data_correction:
-  rc7_path: "artifacts/a4_corrected_data/RC7_corrected.csv"
-
-control_register_NR:
-  control_register_path: "artifacts/a5_control_register_NR/control_register_NR.csv"
-
-estimate_prep:
-  estimates_table_path: "artifacts/a6_estimate_prep/all_estimates.csv"
-
-annex_prep:
-  annex_path: "artifacts/a7_annex_prep/annex.csv"
-
-chart_prep:
-  chart_path: "artifacts/a8_charts/charts.csv"

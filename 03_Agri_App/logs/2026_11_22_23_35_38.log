@@ -1,0 +1,26 @@
+[2026-11-22 23:35:38,646] 40 root - INFO - Starting ML Ingestion pipeline
+[2026-11-22 23:35:38,646] 45 root - INFO - Input path: 01_raw_data\00_MasterList
+[2026-11-22 23:35:38,647] 46 root - INFO - Output path: artifacts\a1_ingested_ML\ingested_ML.csv
+[2026-11-22 23:35:38,647] 73 root - INFO - Entered Method create_directories
+[2026-11-22 23:35:38,647] 77 root - INFO - Directory created: artifacts\a1_ingested_ML
+[2026-11-22 23:35:38,647] 78 root - INFO - Exited Method create_directories
+[2026-11-22 23:35:38,647] 67 root - INFO - Starting ML data ingestion
+[2026-11-22 23:35:38,647] 26 root - INFO - Discovered 3 Excel files in 01_raw_data\00_MasterList
+[2026-11-22 23:35:38,657] 46 root - INFO - Loading Excel file: 01_raw_data\00_MasterList\Kharif_ML_2_0_BR_2025-26.xlsx
+[2026-11-22 23:35:38,983] 53 root - INFO - Loaded sheet 'MASTER LIST' from Kharif_ML_2_0_BR_2025-26.xlsx (1130 rows)
+[2026-11-22 23:35:38,984] 40 root - INFO - Loaded 1130 rows from Kharif_ML_2_0_BR_2025-26.xlsx
+[2026-11-22 23:35:38,984] 46 root - INFO - Loading Excel file: 01_raw_data\00_MasterList\ML_2025-26_v5.xlsx
+[2026-11-22 23:35:39,279] 53 root - INFO - Loaded sheet 'Sheet1' from ML_2025-26_v5.xlsx (2880 rows)
+[2026-11-22 23:35:39,280] 40 root - INFO - Loaded 2880 rows from ML_2025-26_v5.xlsx
+[2026-11-22 23:35:39,281] 46 root - INFO - Loading Excel file: 01_raw_data\00_MasterList\ML_2_0_BR_2025-26.xlsx
+[2026-11-22 23:35:39,508] 53 root - INFO - Loaded sheet 'MASTER LIST' from ML_2_0_BR_2025-26.xlsx (2250 rows)
+[2026-11-22 23:35:39,508] 40 root - INFO - Loaded 2250 rows from ML_2_0_BR_2025-26.xlsx
+[2026-11-22 23:35:39,518] 97 root - INFO - Completed ML data ingestion (total rows: 6260)
+[2026-11-22 23:35:39,519] 29 root - INFO - Entered Method save_csv_overwrite
+[2026-11-22 23:35:39,519] 73 root - INFO - Entered Method create_directories
+[2026-11-22 23:35:39,519] 77 root - INFO - Directory created: artifacts\a1_ingested_ML
+[2026-11-22 23:35:39,519] 78 root - INFO - Exited Method create_directories
+[2026-11-22 23:35:39,549] 33 root - INFO - CSV file saved at artifacts\a1_ingested_ML\ingested_ML.csv (6260 rows)
+[2026-11-22 23:35:39,549] 37 root - INFO - Exited Method save_csv_overwrite
+[2026-11-22 23:35:39,549] 58 root - INFO - Saved ingested ML data to artifacts\a1_ingested_ML\ingested_ML.csv (shape: (6260, 28))
+[2026-11-22 23:35:39,549] 60 root - INFO - Completed ML Ingestion pipeline

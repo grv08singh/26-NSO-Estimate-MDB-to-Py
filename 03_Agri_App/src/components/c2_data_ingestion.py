@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 from dataclasses import dataclass
+from datetime import datetime
 import pandas as pd
 import numpy as np
 from src.utils.common import load_csv, load_excel, load_mdb
@@ -53,7 +54,6 @@ class DataIngestion:
 
     def _load_file(self, file_path: Path) -> pd.DataFrame | None:
         ext = file_path.suffix.lower()
-        source = ext.lstrip(".")
 
         if ext == ".csv":
             df = load_csv(file_path)
@@ -64,11 +64,72 @@ class DataIngestion:
         else:
             return None
 
+        # Remove rows where all fields are empty/null in the raw data
+        initial_rows = len(df)
+        df = df.dropna(how="all")
+        final_rows = len(df)
+        empty_rows_removed = initial_rows - final_rows
+        if empty_rows_removed > 0:
+            logging.info(f"Removed {empty_rows_removed} empty rows from {file_path.name} ({initial_rows} -> {final_rows})")
+
         # Standardize columns to match REQUIRED_COLUMNS schema
         df = _standardize_columns(df)
 
-        df["source"] = source
-        logging.info(f"Loaded {len(df)} rows from {file_path.name} (source={source})")
+        # Remove rows where all RC7 columns are NaN (no RC7 data)
+        # This removes rows from files that don't have RC7 format data (e.g., Excel with different schema)
+        rc7_cols = [col for col in REQUIRED_COLUMNS if col in df.columns]
+        if rc7_cols:
+            initial_rows = len(df)
+            df = df.dropna(subset=rc7_cols, how="all")
+            final_rows = len(df)
+            rc7_empty_removed = initial_rows - final_rows
+            if rc7_empty_removed > 0:
+                logging.info(f"Removed {rc7_empty_removed} rows with no RC7 data from {file_path.name} ({initial_rows} -> {final_rows})")
+
+        # Return empty dataframe if all rows were removed
+        if df.empty:
+            logging.info(f"No RC7 data rows remaining in {file_path.name}")
+            return df
+
+        # Add CROPCODE extracted from EXPTID (digits 8-11, 1-indexed = positions 7-10 0-indexed)
+        if "EXPTID" in df.columns:
+            # Convert EXPTID to string, handling both float (e.g., 1.330101e+11) and string formats
+            def exptid_to_str(x):
+                if pd.isna(x):
+                    return ""
+                if isinstance(x, float):
+                    return f"{x:.0f}"
+                return str(x)
+
+            df["EXPTID_str"] = df["EXPTID"].apply(exptid_to_str)
+            df["CROPCODE"] = df["EXPTID_str"].str[7:11]
+            df = df.drop(columns=["EXPTID_str"])
+
+        # Add UID column: YR_STAT_SESON_ST_CROPCODE_DIST_VILL_EXPNO
+        uid_cols = ["YR", "STAT", "SESON", "ST", "CROPCODE", "DIST", "VILL", "EXPNO"]
+        if all(col in df.columns for col in uid_cols):
+            def clean_val(v):
+                if pd.isna(v):
+                    return ""
+                if isinstance(v, float):
+                    return f"{v:.0f}"
+                return str(v).replace(".0", "")
+
+            df["UID"] = (
+                df["YR"].apply(clean_val) + "_" +
+                df["STAT"].apply(clean_val) + "_" +
+                df["SESON"].apply(clean_val) + "_" +
+                df["ST"].apply(clean_val) + "_" +
+                df["CROPCODE"].astype(str) + "_" +
+                df["DIST"].apply(clean_val) + "_" +
+                df["VILL"].apply(clean_val) + "_" +
+                df["EXPNO"].apply(clean_val)
+            )
+            # Move UID to first column
+            cols = ["UID"] + [col for col in df.columns if col != "UID"]
+            df = df[cols]
+
+        logging.info(f"Loaded {len(df)} rows from {file_path.name}")
         return df
 
     def ingest_data(self) -> pd.DataFrame:
@@ -76,6 +137,9 @@ class DataIngestion:
         df = None
 
         try:
+            # Capture ingestion timestamp
+            ingestion_timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
             for file_path in self._discover_files():
                 temp_df = self._load_file(file_path)
                 if temp_df is None:
@@ -89,6 +153,21 @@ class DataIngestion:
             if df is None:
                 logging.warning("No valid data files found; returning empty DataFrame")
                 df = pd.DataFrame()
+            else:
+                # Add created_at timestamp column
+                df["created_at"] = ingestion_timestamp
+
+                # Remove duplicates based on UID, keeping the latest row based on created_at
+                if "UID" in df.columns:
+                    initial_rows = len(df)
+                    # Sort by created_at descending so latest rows come first
+                    df = df.sort_values(by="created_at", ascending=False)
+                    # Drop duplicates based on UID, keeping the first (latest) occurrence
+                    df = df.drop_duplicates(subset=["UID"], keep="first")
+                    final_rows = len(df)
+                    duplicates_removed = initial_rows - final_rows
+                    if duplicates_removed > 0:
+                        logging.info(f"Removed {duplicates_removed} duplicate UID rows ({initial_rows} -> {final_rows})")
 
         except Exception as e:
             logging.info(f"Error occurred while ingesting data from {self.params.input_path}")

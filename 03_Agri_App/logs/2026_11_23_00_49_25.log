@@ -1,0 +1,19 @@
+[2026-11-23 00:49:25,695] 31 root - INFO - Starting Data Ingestion pipeline
+[2026-11-23 00:49:25,695] 37 root - INFO - Input path: 01_raw_data\r1_RawSchedules
+[2026-11-23 00:49:25,695] 38 root - INFO - Output path: artifacts\a2_ingested_data\ingested_data.csv
+[2026-11-23 00:49:25,695] 39 root - INFO - MDB table: Sch20RC7
+[2026-11-23 00:49:25,696] 55 root - INFO - Entered Method create_directories
+[2026-11-23 00:49:25,696] 59 root - INFO - Directory created: artifacts\a2_ingested_data
+[2026-11-23 00:49:25,696] 60 root - INFO - Exited Method create_directories
+[2026-11-23 00:49:25,696] 105 root - INFO - Entered ingest_data method of DataIngestion class
+[2026-11-23 00:49:25,697] 51 root - INFO - Discovered 3 data files in 01_raw_data\r1_RawSchedules
+[2026-11-23 00:49:25,697] 132 root - INFO - Entered Method load_excel
+[2026-11-23 00:49:25,978] 139 root - INFO - Loaded sheet 'FinalNSO_PW_FieldData' from 01_raw_data\r1_RawSchedules\DGCES_DataSharedToNSO_Revised.xlsx (86 rows)
+[2026-11-23 00:49:25,978] 139 root - INFO - Loaded sheet 'FinalNSOFieldData' from 01_raw_data\r1_RawSchedules\DGCES_DataSharedToNSO_Revised.xlsx (86 rows)
+[2026-11-23 00:49:25,991] 150 root - INFO - Exited Method load_excel
+[2026-11-23 00:49:25,992] 28 root - WARNING - Added missing columns with NaN: {'IRRP', 'CODN', 'SVARC', 'E2', 'CROP', 'SRL', 'STAT', 'ST', 'STAGIN', 'CFC', 'E6', 'CCE', 'EQSP', 'E4', 'E10', 'E1', 'RC', 'RSV', 'QTN', 'NIRR', 'QTYP', 'AFFECT', 'VILL', 'QTYG', 'E11', 'EQST', 'RCSSN', 'SESON', 'EQSB', 'CODK', 'CROPCON', 'NEXNR', 'FERTC', 'EXPNO', 'QTK', 'PEST', 'EQSW', 'NEXP', 'DIST', 'E3', 'SEEDR', 'CODP', 'CROPER', 'MANUR', 'QTP', 'E5', 'E15', 'CONFAC', 'STYPE', 'E14', 'E12', 'EXPTID', 'ADH', 'REXML', 'E9', 'E7', 'REJ', 'IRR', 'E8', 'YR', 'E13'}
+[2026-11-23 00:49:25,997] 101 root - INFO - Loaded 172 rows from DGCES_DataSharedToNSO_Revised.xlsx (source=xlsx)
+[2026-11-23 00:49:25,997] 112 root - INFO - Entered Method load_mdb
+[2026-11-23 00:49:26,550] 122 root - INFO - MDB table 'Sch20RC7' loaded from 01_raw_data\r1_RawSchedules\F110020408352_8Jun2026_C4BR02WHEAT_HYI0422025-26.mdb (1 rows)
+[2026-11-23 00:49:26,550] 126 root - INFO - Exited Method load_mdb
+[2026-11-23 00:49:26,551] 124 root - INFO - Error occurred while ingesting data from 01_raw_data\r1_RawSchedules

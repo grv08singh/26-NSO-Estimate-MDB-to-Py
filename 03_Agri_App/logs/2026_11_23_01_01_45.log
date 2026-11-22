@@ -1,0 +1,16 @@
+[2026-11-23 01:01:45,493] 31 root - INFO - Starting Data Ingestion pipeline
+[2026-11-23 01:01:45,493] 37 root - INFO - Input path: 01_raw_data\r1_RawSchedules
+[2026-11-23 01:01:45,493] 38 root - INFO - Output path: artifacts\a2_ingested_data\ingested_data.csv
+[2026-11-23 01:01:45,493] 39 root - INFO - MDB table: Sch20RC7
+[2026-11-23 01:01:45,493] 55 root - INFO - Entered Method create_directories
+[2026-11-23 01:01:45,494] 59 root - INFO - Directory created: artifacts\a2_ingested_data
+[2026-11-23 01:01:45,494] 60 root - INFO - Exited Method create_directories
+[2026-11-23 01:01:45,494] 131 root - INFO - Entered ingest_data method of DataIngestion class
+[2026-11-23 01:01:45,498] 52 root - INFO - Discovered 3 data files in 01_raw_data\r1_RawSchedules
+[2026-11-23 01:01:45,498] 132 root - INFO - Entered Method load_excel
+[2026-11-23 01:01:45,778] 139 root - INFO - Loaded sheet 'FinalNSO_PW_FieldData' from 01_raw_data\r1_RawSchedules\DGCES_DataSharedToNSO_Revised.xlsx (86 rows)
+[2026-11-23 01:01:45,778] 139 root - INFO - Loaded sheet 'FinalNSOFieldData' from 01_raw_data\r1_RawSchedules\DGCES_DataSharedToNSO_Revised.xlsx (86 rows)
+[2026-11-23 01:01:45,789] 150 root - INFO - Exited Method load_excel
+[2026-11-23 01:01:45,793] 29 root - WARNING - Added missing columns with NaN: {'E3', 'VILL', 'QTN', 'DIST', 'SVARC', 'E15', 'EXPNO', 'CONFAC', 'QTYG', 'FERTC', 'CROPER', 'E2', 'RC', 'MANUR', 'E14', 'QTP', 'E13', 'EQSP', 'REXML', 'EQST', 'SESON', 'PEST', 'CCE', 'E4', 'E5', 'CODP', 'NEXP', 'EQSB', 'E7', 'E11', 'REJ', 'STAGIN', 'NIRR', 'QTK', 'STAT', 'CFC', 'STYPE', 'CODK', 'YR', 'ADH', 'EXPTID', 'IRRP', 'QTYP', 'IRR', 'E6', 'SEEDR', 'CODN', 'E12', 'RSV', 'RCSSN', 'NEXNR', 'E1', 'ST', 'EQSW', 'CROP', 'CROPCON', 'E9', 'AFFECT', 'E10', 'SRL', 'E8'}
+[2026-11-23 01:01:45,794] 87 root - INFO - Removed 172 rows with no RC7 data from DGCES_DataSharedToNSO_Revised.xlsx (172 -> 0)
+[2026-11-23 01:01:45,795] 168 root - INFO - Error occurred while ingesting data from 01_raw_data\r1_RawSchedules

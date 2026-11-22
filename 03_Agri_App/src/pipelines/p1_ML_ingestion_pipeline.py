@@ -18,7 +18,7 @@ class MLIngestionPipeline:
         ml_path = self.ml_ingestion_config.get("ML_path", "")
         if ml_path:
             return Path(ml_path)
-        return Path("01_raw_data/00_MasterList")
+        return Path("01_raw_data/r0_MasterList")
 
     def _get_output_path(self) -> Path:
         ingested_ml_path = self.ml_ingestion_config.get("ingested_ML_path", "artifacts/a00_ingested_ML/ingested_ML.csv")
