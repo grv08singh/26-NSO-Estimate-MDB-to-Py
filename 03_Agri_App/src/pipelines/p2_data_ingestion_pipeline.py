@@ -1,5 +1,5 @@
 from pathlib import Path
-from src.components.c1_data_ingestion import DataIngestion, DataIngestionParams
+from src.components.c2_data_ingestion import DataIngestion, DataIngestionParams
 from src.utils.config_loader import load_config
 from src.utils.common import save_csv, create_directories
 from src.logger import logging

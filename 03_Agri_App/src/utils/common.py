@@ -34,24 +34,6 @@ class BoxValueError(ValueError):
     pass
 
 
-REQUIRED_COLUMNS = [
-    "EXPTID", "SRL", "RC", "ST", "YR", "SESON", "CROP", "NEXP", "NEXNR", "CONFAC",
-    "STAT", "DIST", "VILL", "RSV", "EXPNO", "STAGIN", "REXML", "CCE", "CFC", "RCSSN",
-    "E1", "E2", "E9", "E10", "E11", "E12", "ADH", "QTYG", "QTYP", "E13",
-    "EQST", "EQSB", "EQSW", "EQSP", "E14", "STYPE", "E3", "SVARC", "SEEDR", "E4",
-    "IRR", "E5", "IRRP", "NIRR", "FERTC", "E6", "QTN", "CODN", "QTP", "CODP",
-    "QTK", "CODK", "MANUR", "E7", "PEST", "E8", "E15", "REJ", "CROPER", "CROPCON", "AFFECT"
-]
-
-
-def _standardize_columns(df: pd.DataFrame) -> pd.DataFrame:
-    missing_cols = set(REQUIRED_COLUMNS) - set(df.columns)
-    if missing_cols:
-        for col in missing_cols:
-            df[col] = np.nan
-        logging.warning(f"Added missing columns with NaN: {missing_cols}")
-    return df[REQUIRED_COLUMNS]
-
 @ensure_annotations
 def read_yaml(path: Path) -> ConfigBox:
     logging.info("Entered Method read_yaml")
@@ -104,7 +86,7 @@ def save_csv(path: Path, data: pd.DataFrame):
             combined_df.to_csv(path, index=False)
             logging.info(f"Appended {len(data)} rows to existing CSV at {path} (total: {len(combined_df)} rows)")
         else:
-            data.to_csv(path, index=False)
+            data.to_csv(path, index=False, encoding='utf-8')
             logging.info(f"CSV file saved at {path} ({len(data)} rows)")
     except Exception as e:
         logging.info(f"Error occurred while saving CSV: {path}")
@@ -113,19 +95,20 @@ def save_csv(path: Path, data: pd.DataFrame):
 
 @ensure_annotations
 def load_csv(path: Path) -> pd.DataFrame:
+    """Load CSV file without column standardization."""
     logging.info("Entered Method load_csv")
     try:
         content = pd.read_csv(path)
-        logging.info(f"CSV file loaded successfully: {path}")
+        logging.info(f"CSV file loaded successfully: {path} ({len(content)} rows)")
     except Exception as e:
         logging.info(f"Error occurred while loading CSV: {path}")
         raise e
-    content = _standardize_columns(content)
     logging.info("Exited Method load_csv")
     return content
 
 @ensure_annotations
 def load_mdb(path: Path, table: str) -> pd.DataFrame:
+    """Load MDB table without column standardization."""
     logging.info("Entered Method load_mdb")
     try:
         conn_str = (
@@ -136,32 +119,31 @@ def load_mdb(path: Path, table: str) -> pd.DataFrame:
         query = f"SELECT * FROM [{table}]"
         content = pd.read_sql(query, conn)
         conn.close()
-        logging.info(f"MDB table '{table}' loaded from {path}")
+        logging.info(f"MDB table '{table}' loaded from {path} ({len(content)} rows)")
     except Exception as e:
         logging.info(f"Error occurred while loading MDB: {path}")
         raise e
-    content = _standardize_columns(content)
     logging.info("Exited Method load_mdb")
     return content
 
 @ensure_annotations
 def load_excel(path: Path) -> pd.DataFrame:
+    """Load all sheets from Excel file without column filtering."""
     logging.info("Entered Method load_excel")
     try:
         all_sheets = pd.read_excel(path, sheet_name=None, engine="openpyxl")
         valid_dfs = []
         for name, sheet_df in all_sheets.items():
-            # Check if required columns (or a subset) are present
-            if any(col in sheet_df.columns for col in REQUIRED_COLUMNS):
-                valid_dfs.append(_standardize_columns(sheet_df))
-                logging.info(f"Loaded sheet '{name}' from {path}")
+            if not sheet_df.empty:
+                valid_dfs.append(sheet_df)
+                logging.info(f"Loaded sheet '{name}' from {path} ({len(sheet_df)} rows)")
             else:
-                logging.info(f"Skipped sheet '{name}' from {path} (no required columns)")
+                logging.info(f"Skipped empty sheet '{name}' from {path}")
         if valid_dfs:
             content = pd.concat(valid_dfs, ignore_index=True)
         else:
-            logging.warning(f"No sheets with required columns found in {path}")
-            content = pd.DataFrame(columns=REQUIRED_COLUMNS)
+            logging.warning(f"No valid sheets found in {path}")
+            content = pd.DataFrame()
     except Exception as e:
         logging.info(f"Error occurred while loading Excel: {path}")
         raise e

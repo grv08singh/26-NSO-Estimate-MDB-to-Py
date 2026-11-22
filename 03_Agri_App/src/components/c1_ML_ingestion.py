@@ -2,18 +2,18 @@ import os
 from pathlib import Path
 from dataclasses import dataclass
 import pandas as pd
-from src.utils.common import load_csv, load_excel, load_mdb
+from src.utils.common import load_excel
 from src.logger import logging
 
 
 @dataclass
-class DataIngestionParams:
+class MLIngestionParams:
     input_path: Path
-    mdb_table: str
+    output_path: Path
 
 
-class DataIngestion:
-    def __init__(self, params: DataIngestionParams):
+class MLIngestion:
+    def __init__(self, params: MLIngestionParams):
         self.params = params
 
     def _discover_files(self) -> list[Path]:
@@ -22,30 +22,28 @@ class DataIngestion:
             file_path = Path(self.params.input_path) / file
             if file_path.is_file():
                 ext = file_path.suffix.lower()
-                if ext in (".csv", ".mdb", ".accdb", ".xlsx", ".xls"):
+                if ext in (".xlsx", ".xls"):
                     files.append(file_path)
-        logging.info(f"Discovered {len(files)} data files in {self.params.input_path}")
+        logging.info(f"Discovered {len(files)} Excel files in {self.params.input_path}")
         return files
 
     def _load_file(self, file_path: Path) -> pd.DataFrame | None:
         ext = file_path.suffix.lower()
-        source = ext.lstrip(".")
 
-        if ext == ".csv":
-            df = load_csv(file_path)
-        elif ext in (".mdb", ".accdb"):
-            df = load_mdb(file_path, self.params.mdb_table)
-        elif ext in (".xlsx", ".xls"):
+        if ext in (".xlsx", ".xls"):
             df = load_excel(file_path)
         else:
             return None
 
-        df["source"] = source
-        logging.info(f"Loaded {len(df)} rows from {file_path.name} (source={source})")
-        return df
+        if df is not None and not df.empty:
+            df["source"] = ext.lstrip(".")
+            df["source_file"] = file_path.name
+            logging.info(f"Loaded {len(df)} rows from {file_path.name}")
+            return df
+        return None
 
-    def ingest_data(self) -> pd.DataFrame:
-        logging.info("Entered ingest_data method of DataIngestion class")
+    def ingest_ML(self) -> pd.DataFrame:
+        logging.info("Starting ML data ingestion")
         df = None
 
         try:
@@ -62,10 +60,18 @@ class DataIngestion:
             if df is None:
                 logging.warning("No valid data files found; returning empty DataFrame")
                 df = pd.DataFrame()
+            else:
+                # Remove duplicate rows
+                initial_rows = len(df)
+                df = df.drop_duplicates()
+                final_rows = len(df)
+                duplicates_removed = initial_rows - final_rows
+                if duplicates_removed > 0:
+                    logging.info(f"Removed {duplicates_removed} duplicate rows ({initial_rows} -> {final_rows})")
 
         except Exception as e:
             logging.info(f"Error occurred while ingesting data from {self.params.input_path}")
             raise e
 
-        logging.info(f"Exited ingest_data method of DataIngestion class (total rows: {len(df)})")
+        logging.info(f"Completed ML data ingestion (total rows: {len(df)})")
         return df
