@@ -10,3 +10,4 @@ sch_ingestion:
 
 RC7_preprocessing:
   RC7_preprocessed_path: "artifacts/a3_RC7_preprocessed/preprocessed_RC7.csv"
+  RC7_corrected_path: "artifacts/a4_corrected_data/corrected_RC7.csv"

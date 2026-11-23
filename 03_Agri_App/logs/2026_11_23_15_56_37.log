@@ -1,4 +1,0 @@
-[2026-11-23 15:56:37,426] 32 root - INFO - Starting Data Preprocessing pipeline
-[2026-11-23 15:56:37,426] 38 root - INFO - ML ingested path: artifacts\a1_ingested_ML\ingested_ML.csv
-[2026-11-23 15:56:37,426] 39 root - INFO - Data ingested path: artifacts\a2_ingested_data\ingested_RC7.csv
-[2026-11-23 15:56:37,427] 40 root - INFO - Output path: artifacts\a3_processed_data\preprocessed_RC7.csv
