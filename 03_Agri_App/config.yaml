@@ -4,10 +4,9 @@ ML_ingestion:
   raw_ML_path: "01_raw_data/r0_MasterList"
   ingested_ML_path: "artifacts/a1_ingested_ML/ingested_ML.csv"
 
-data_ingestion:
+sch_ingestion:
   raw_data_path: "01_raw_data/r1_RawSchedules"
-  ingested_data_path: "artifacts/a2_ingested_data/ingested_RC7.csv"
+  ingested_sch_path: "artifacts/a2_ingested_sch/ingested_sch.csv"
 
-data_preprocessing:
-  preprocessed_RC7_path: "artifacts/a3_processed_data/preprocessed_RC7.csv"
-
+RC7_preprocessing:
+  RC7_preprocessed_path: "artifacts/a3_RC7_preprocessed/preprocessed_RC7.csv"

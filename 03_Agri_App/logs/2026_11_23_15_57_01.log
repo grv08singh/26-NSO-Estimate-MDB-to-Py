@@ -1,0 +1,35 @@
+[2026-11-23 15:57:01,328] 31 root - INFO - Starting Data Ingestion pipeline
+[2026-11-23 15:57:01,329] 37 root - INFO - Input path: 01_raw_data\r1_RawSchedules
+[2026-11-23 15:57:01,329] 38 root - INFO - Output path: artifacts\a2_ingested_data\ingested_RC7.csv
+[2026-11-23 15:57:01,329] 39 root - INFO - MDB table: Sch20RC7
+[2026-11-23 15:57:01,329] 55 root - INFO - Entered Method create_directories
+[2026-11-23 15:57:01,329] 59 root - INFO - Directory created: artifacts\a2_ingested_data
+[2026-11-23 15:57:01,329] 60 root - INFO - Exited Method create_directories
+[2026-11-23 15:57:01,329] 158 root - INFO - Entered ingest_data method of DataIngestion class
+[2026-11-23 15:57:01,330] 52 root - INFO - Discovered 4 data files in 01_raw_data\r1_RawSchedules
+[2026-11-23 15:57:01,331] 132 root - INFO - Entered Method load_excel
+[2026-11-23 15:57:01,553] 139 root - INFO - Loaded sheet 'FinalNSO_PW_FieldData' from 01_raw_data\r1_RawSchedules\DGCES_DataSharedToNSO_Revised.xlsx (86 rows)
+[2026-11-23 15:57:01,553] 139 root - INFO - Loaded sheet 'FinalNSOFieldData' from 01_raw_data\r1_RawSchedules\DGCES_DataSharedToNSO_Revised.xlsx (86 rows)
+[2026-11-23 15:57:01,560] 150 root - INFO - Exited Method load_excel
+[2026-11-23 15:57:01,563] 29 root - WARNING - Added missing columns with NaN: {'IRRP', 'STAT', 'QTP', 'E12', 'SVARC', 'E9', 'E8', 'E4', 'EQSP', 'E15', 'CROP', 'EXPNO', 'IRR', 'YR', 'NEXNR', 'SRL', 'QTYG', 'E6', 'RC', 'SESON', 'EQSW', 'QTK', 'NEXP', 'E14', 'STYPE', 'EQSB', 'E2', 'DIST', 'AFFECT', 'RSV', 'MANUR', 'CFC', 'CODP', 'CODN', 'E5', 'NIRR', 'SEEDR', 'STAGIN', 'ADH', 'QTN', 'E13', 'CODK', 'E1', 'E11', 'E7', 'REJ', 'CROPCON', 'E3', 'CONFAC', 'ST', 'PEST', 'QTYP', 'E10', 'REXML', 'EQST', 'CCE', 'CROPER', 'VILL', 'EXPTID', 'FERTC', 'RCSSN'}
+[2026-11-23 15:57:01,564] 87 root - INFO - Removed 172 rows with no RC7 data from DGCES_DataSharedToNSO_Revised.xlsx (172 -> 0)
+[2026-11-23 15:57:01,564] 91 root - INFO - No RC7 data rows remaining in DGCES_DataSharedToNSO_Revised.xlsx
+[2026-11-23 15:57:01,565] 112 root - INFO - Entered Method load_mdb
+[2026-11-23 15:57:01,815] 122 root - INFO - MDB table 'Sch20RC7' loaded from 01_raw_data\r1_RawSchedules\F110020408352_8Jun2026_C4BR02WHEAT_HYI0422025-26.mdb (1 rows)
+[2026-11-23 15:57:01,815] 126 root - INFO - Exited Method load_mdb
+[2026-11-23 15:57:01,820] 154 root - INFO - Loaded 1 rows from F110020408352_8Jun2026_C4BR02WHEAT_HYI0422025-26.mdb
+[2026-11-23 15:57:01,823] 112 root - INFO - Entered Method load_mdb
+[2026-11-23 15:57:02,005] 122 root - INFO - MDB table 'Sch20RC7' loaded from 01_raw_data\r1_RawSchedules\NSSAS2024.mdb (1620 rows)
+[2026-11-23 15:57:02,005] 126 root - INFO - Exited Method load_mdb
+[2026-11-23 15:57:02,021] 154 root - INFO - Loaded 1620 rows from NSSAS2024.mdb
+[2026-11-23 15:57:02,023] 112 root - INFO - Entered Method load_mdb
+[2026-11-23 15:57:02,217] 122 root - INFO - MDB table 'Sch20RC7' loaded from 01_raw_data\r1_RawSchedules\NSSAS2025.mdb (1947 rows)
+[2026-11-23 15:57:02,217] 126 root - INFO - Exited Method load_mdb
+[2026-11-23 15:57:02,236] 154 root - INFO - Loaded 1947 rows from NSSAS2025.mdb
+[2026-11-23 15:57:02,244] 192 root - INFO - Removed 2 duplicate UID rows (3568 -> 3566)
+[2026-11-23 15:57:02,244] 198 root - INFO - Exited ingest_data method of DataIngestion class (total rows: 3566)
+[2026-11-23 15:57:02,244] 81 root - INFO - Entered Method save_csv
+[2026-11-23 15:57:02,268] 90 root - INFO - CSV file saved at artifacts\a2_ingested_data\ingested_RC7.csv (3566 rows)
+[2026-11-23 15:57:02,268] 94 root - INFO - Exited Method save_csv
+[2026-11-23 15:57:02,268] 51 root - INFO - Saved ingested data to artifacts\a2_ingested_data\ingested_RC7.csv (shape: (3566, 64))
+[2026-11-23 15:57:02,268] 53 root - INFO - Completed Data Ingestion pipeline

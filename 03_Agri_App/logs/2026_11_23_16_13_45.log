@@ -1,0 +1,30 @@
+[2026-11-23 16:13:45,166] 32 root - INFO - Starting Data Preprocessing pipeline
+[2026-11-23 16:13:45,166] 38 root - INFO - ML ingested path: artifacts\a1_ingested_ML\ingested_ML.csv
+[2026-11-23 16:13:45,166] 39 root - INFO - Data ingested path: artifacts\a2_ingested_data\ingested_RC7.csv
+[2026-11-23 16:13:45,166] 40 root - INFO - Output path: artifacts\a3_preprocessed_data\preprocessed_RC7.csv
+[2026-11-23 16:13:45,166] 55 root - INFO - Entered Method create_directories
+[2026-11-23 16:13:45,166] 59 root - INFO - Directory created: artifacts\a3_preprocessed_data
+[2026-11-23 16:13:45,166] 60 root - INFO - Exited Method create_directories
+[2026-11-23 16:13:45,166] 37 root - INFO - Starting data preprocessing - left join on UID, keeping only a2 columns
+[2026-11-23 16:13:45,166] 21 root - INFO - Loading ML ingested data (a1) from artifacts\a1_ingested_ML\ingested_ML.csv
+[2026-11-23 16:13:45,167] 99 root - INFO - Entered Method load_csv
+[2026-11-23 16:13:45,181] 102 root - INFO - CSV file loaded successfully: artifacts\a1_ingested_ML\ingested_ML.csv (10918 rows)
+[2026-11-23 16:13:45,181] 106 root - INFO - Exited Method load_csv
+[2026-11-23 16:13:45,181] 23 root - INFO - Loaded ML ingested data (a1) with shape (10918, 29)
+[2026-11-23 16:13:45,181] 21 root - INFO - Loading Data ingested (a2) from artifacts\a2_ingested_data\ingested_RC7.csv
+[2026-11-23 16:13:45,181] 99 root - INFO - Entered Method load_csv
+[2026-11-23 16:13:45,200] 102 root - INFO - CSV file loaded successfully: artifacts\a2_ingested_data\ingested_RC7.csv (7132 rows)
+[2026-11-23 16:13:45,200] 106 root - INFO - Exited Method load_csv
+[2026-11-23 16:13:45,200] 23 root - INFO - Loaded Data ingested (a2) with shape (7132, 64)
+[2026-11-23 16:13:45,201] 30 root - INFO - UID column validated in ML ingested data (a1) (10810 unique values)
+[2026-11-23 16:13:45,202] 30 root - INFO - UID column validated in Data ingested (a2) (3566 unique values)
+[2026-11-23 16:13:45,202] 51 root - INFO - Performing left join on UID. Left shape: (10918, 29), Right shape: (7132, 64)
+[2026-11-23 16:13:45,218] 61 root - INFO - Left join completed. Result shape: (12226, 92)
+[2026-11-23 16:13:45,218] 66 root - INFO - Total UIDs from left (ML): 10918
+[2026-11-23 16:13:45,218] 67 root - INFO - UIDs with matching RC7 data: 2616
+[2026-11-23 16:13:45,218] 68 root - INFO - UIDs without RC7 match: 8302
+[2026-11-23 16:13:45,238] 112 root - INFO - Final output shape (only a2 columns + UID): (12226, 64)
+[2026-11-23 16:13:45,238] 113 root - INFO - Columns kept: ['UID', 'EXPTID', 'SRL', 'RC', 'ST', 'YR', 'SESON', 'CROP', 'NEXP', 'NEXNR', 'CONFAC', 'STAT', 'DIST', 'VILL', 'RSV', 'EXPNO', 'STAGIN', 'REXML', 'CCE', 'CFC', 'RCSSN', 'E1', 'E2', 'E9', 'E10', 'E11', 'E12', 'ADH', 'QTYG', 'QTYP', 'E13', 'EQST', 'EQSB', 'EQSW', 'EQSP', 'E14', 'STYPE', 'E3', 'SVARC', 'SEEDR', 'E4', 'IRR', 'E5', 'IRRP', 'NIRR', 'FERTC', 'E6', 'QTN', 'CODN', 'QTP', 'CODP', 'QTK', 'CODK', 'MANUR', 'E7', 'PEST', 'E8', 'E15', 'REJ', 'CROPER', 'CROPCON', 'AFFECT', 'CROPCODE', 'created_at']
+[2026-11-23 16:13:45,238] 116 root - INFO - Saving preprocessed data to artifacts\a3_preprocessed_data\preprocessed_RC7.csv
+[2026-11-23 16:13:45,404] 119 root - INFO - Preprocessed data saved successfully ((12226, 64))
+[2026-11-23 16:13:45,406] 70 root - INFO - Completed Data Preprocessing pipeline (shape: (12226, 64))

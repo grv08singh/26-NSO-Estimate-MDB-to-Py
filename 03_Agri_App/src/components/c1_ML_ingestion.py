@@ -80,6 +80,31 @@ class MLIngestion:
         logging.info(f"Completed ML data ingestion (total rows: {len(df)})")
         return df
 
+    def _clean_uid_val(self, v) -> str:
+        """Convert value to string without leading zeros.
+        If value is numeric (int/float) or numeric string, convert to int first to strip leading zeros.
+        """
+        if pd.isna(v):
+            return ""
+        if isinstance(v, float):
+            return f"{v:.0f}"
+        if isinstance(v, int):
+            return str(v)
+        # For strings, try to convert to number to strip leading zeros
+        s = str(v).strip()
+        if s == "":
+            return ""
+        # Try to convert to float/int to remove leading zeros
+        try:
+            if s.replace('.', '', 1).isdigit():
+                num = float(s)
+                if num == int(num):
+                    return str(int(num))
+                return str(num)
+        except ValueError:
+            pass
+        return s.replace(".0", "")
+
     def _add_uid_column(self, df: pd.DataFrame) -> pd.DataFrame:
         """Add UID column with format: YR_STATE_SEASONCODE_SAMPLE_CROPCODE_DISTRICT_SELORDER_EXPT"""
         # Ensure required columns exist
@@ -89,16 +114,16 @@ class MLIngestion:
             logging.warning(f"Missing columns for UID generation: {missing_cols}")
             return df
 
-        # Convert to string and create UID
+        # Convert to string and create UID (using _clean_uid_val to strip leading zeros)
         df["UID"] = (
-            df["YR"].astype(str) + "_" +
-            df["STATE"].astype(str) + "_" +
-            df["SEASONCODE"].astype(str) + "_" +
-            df["SAMPLE"].astype(str) + "_" +
-            df["CROPCODE"].astype(str) + "_" +
-            df["DISTRICT"].astype(str) + "_" +
-            df["SELORDER"].astype(str) + "_" +
-            df["EXPT"].astype(str)
+            df["YR"].apply(self._clean_uid_val) + "_" +
+            df["STATE"].apply(self._clean_uid_val) + "_" +
+            df["SEASONCODE"].apply(self._clean_uid_val) + "_" +
+            df["SAMPLE"].apply(self._clean_uid_val) + "_" +
+            df["CROPCODE"].apply(self._clean_uid_val) + "_" +
+            df["DISTRICT"].apply(self._clean_uid_val) + "_" +
+            df["SELORDER"].apply(self._clean_uid_val) + "_" +
+            df["EXPT"].apply(self._clean_uid_val)
         )
 
         # Move UID to the first column
