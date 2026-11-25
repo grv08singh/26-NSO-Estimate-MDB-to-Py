@@ -11,6 +11,7 @@ Requires-Dist: openpyxl
 Requires-Dist: ensure
 Requires-Dist: pyyaml
 Requires-Dist: joblib
+Requires-Dist: PySide6
 Dynamic: author
 Dynamic: author-email
 Dynamic: requires-dist

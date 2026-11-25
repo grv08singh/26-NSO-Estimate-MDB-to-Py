@@ -3,9 +3,9 @@
 Steps to follow
 
 #### Create Python environment
-pip install uvicorn
+pip install uv
 uv venv .venv --python 3.13
-.venv\Source\activate
+.\.venv\Scripts\activate.ps1 
 uv pip install -r requirements.txt
 
 ---
