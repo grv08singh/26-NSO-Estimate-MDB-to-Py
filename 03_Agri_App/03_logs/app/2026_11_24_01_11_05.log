@@ -1,0 +1,52 @@
+[2026-11-24 01:11:07,074] 154 root - INFO - Copied ML_2.0_BR_2025-26.xlsx -> 01_raw_data\r0_MasterList\BIHAR\2025-26\ML_2.0_BR_2025-26.xlsx
+[2026-11-24 01:11:07,077] 31 root - INFO - Starting ML Ingestion pipeline
+[2026-11-24 01:11:07,077] 34 root - INFO - Input path: 01_raw_data\r0_MasterList
+[2026-11-24 01:11:07,078] 35 root - INFO - Output path: 02_artifacts\a1_ingested_ML\ingested_ML.csv
+[2026-11-24 01:11:07,078] 59 root - INFO - Entered Method create_directories
+[2026-11-24 01:11:07,078] 63 root - INFO - Directory created: 02_artifacts\a1_ingested_ML
+[2026-11-24 01:11:07,078] 64 root - INFO - Exited Method create_directories
+[2026-11-24 01:11:07,078] 119 root - INFO - Starting ML data ingestion (KrishiSoft checks, lenient, state / year wise)
+[2026-11-24 01:11:07,079] 110 root - INFO - Discovered 1 Excel files in 01_raw_data\r0_MasterList (with sub-folders)
+[2026-11-24 01:11:08,759] 131 root - INFO - BIHAR/2025-26/ML_2.0_BR_2025-26.xlsx: OK - BIHAR 2025-26, 2030 experiments, 0 item(s) cleaned
+[2026-11-24 01:11:08,762] 150 root - INFO - BIHAR 2025-26 season 2: 420 experiments from BIHAR/2025-26/ML_2.0_BR_2025-26.xlsx
+[2026-11-24 01:11:08,762] 150 root - INFO - BIHAR 2025-26 season 3: 580 experiments from BIHAR/2025-26/ML_2.0_BR_2025-26.xlsx
+[2026-11-24 01:11:08,763] 150 root - INFO - BIHAR 2025-26 season 4: 920 experiments from BIHAR/2025-26/ML_2.0_BR_2025-26.xlsx
+[2026-11-24 01:11:08,763] 150 root - INFO - BIHAR 2025-26 season 5: 110 experiments from BIHAR/2025-26/ML_2.0_BR_2025-26.xlsx
+[2026-11-24 01:11:08,796] 215 root - INFO - BIHAR 2025-26: new - 2030 experiments -> 00_database\master_list\BIHAR\2025-26\master_list.csv
+[2026-11-24 01:11:08,883] 324 root - INFO - ML check report written: 02_artifacts\a1_ingested_ML\ML_check_report.xlsx
+[2026-11-24 01:11:08,884] 174 root - INFO - Completed ML data ingestion (stored state + years: 1, experiments: 2030)
+[2026-11-24 01:11:08,884] 59 root - INFO - Entered Method create_directories
+[2026-11-24 01:11:08,885] 63 root - INFO - Directory created: 02_artifacts\a1_ingested_ML
+[2026-11-24 01:11:08,885] 64 root - INFO - Exited Method create_directories
+[2026-11-24 01:11:08,891] 28 root - INFO - CSV file saved at 02_artifacts\a1_ingested_ML\ingested_ML.csv (2030 rows)
+[2026-11-24 01:11:08,891] 50 root - INFO - Completed ML Ingestion pipeline
+[2026-11-24 01:11:27,935] 51 root - INFO - ML_2_0_BR_2026-27.xlsx: passed - BIHAR 2026-27, 2250 experiments, 0 item(s) cleaned
+[2026-11-24 01:11:30,511] 154 root - INFO - Copied ML_2_0_BR_2026-27.xlsx -> 01_raw_data\r0_MasterList\BIHAR\2026-27\ML_2_0_BR_2026-27.xlsx
+[2026-11-24 01:11:30,513] 31 root - INFO - Starting ML Ingestion pipeline
+[2026-11-24 01:11:30,513] 34 root - INFO - Input path: 01_raw_data\r0_MasterList
+[2026-11-24 01:11:30,514] 35 root - INFO - Output path: 02_artifacts\a1_ingested_ML\ingested_ML.csv
+[2026-11-24 01:11:30,514] 59 root - INFO - Entered Method create_directories
+[2026-11-24 01:11:30,514] 63 root - INFO - Directory created: 02_artifacts\a1_ingested_ML
+[2026-11-24 01:11:30,514] 64 root - INFO - Exited Method create_directories
+[2026-11-24 01:11:30,514] 119 root - INFO - Starting ML data ingestion (KrishiSoft checks, lenient, state / year wise)
+[2026-11-24 01:11:30,515] 110 root - INFO - Discovered 2 Excel files in 01_raw_data\r0_MasterList (with sub-folders)
+[2026-11-24 01:11:32,099] 131 root - INFO - BIHAR/2025-26/ML_2.0_BR_2025-26.xlsx: OK - BIHAR 2025-26, 2030 experiments, 0 item(s) cleaned
+[2026-11-24 01:11:32,704] 131 root - INFO - BIHAR/2026-27/ML_2_0_BR_2026-27.xlsx: OK - BIHAR 2026-27, 2250 experiments, 0 item(s) cleaned
+[2026-11-24 01:11:32,709] 150 root - INFO - BIHAR 2025-26 season 2: 420 experiments from BIHAR/2025-26/ML_2.0_BR_2025-26.xlsx
+[2026-11-24 01:11:32,709] 150 root - INFO - BIHAR 2025-26 season 3: 580 experiments from BIHAR/2025-26/ML_2.0_BR_2025-26.xlsx
+[2026-11-24 01:11:32,710] 150 root - INFO - BIHAR 2025-26 season 4: 920 experiments from BIHAR/2025-26/ML_2.0_BR_2025-26.xlsx
+[2026-11-24 01:11:32,710] 150 root - INFO - BIHAR 2025-26 season 5: 110 experiments from BIHAR/2025-26/ML_2.0_BR_2025-26.xlsx
+[2026-11-24 01:11:32,710] 150 root - INFO - BIHAR 2026-27 season 2: 540 experiments from BIHAR/2026-27/ML_2_0_BR_2026-27.xlsx
+[2026-11-24 01:11:32,711] 150 root - INFO - BIHAR 2026-27 season 3: 590 experiments from BIHAR/2026-27/ML_2_0_BR_2026-27.xlsx
+[2026-11-24 01:11:32,711] 150 root - INFO - BIHAR 2026-27 season 4: 1040 experiments from BIHAR/2026-27/ML_2_0_BR_2026-27.xlsx
+[2026-11-24 01:11:32,711] 150 root - INFO - BIHAR 2026-27 season 5: 80 experiments from BIHAR/2026-27/ML_2_0_BR_2026-27.xlsx
+[2026-11-24 01:11:32,728] 193 root - INFO - BIHAR 2025-26: unchanged (2030 experiments)
+[2026-11-24 01:11:32,753] 215 root - INFO - BIHAR 2026-27: new - 2250 experiments -> 00_database\master_list\BIHAR\2026-27\master_list.csv
+[2026-11-24 01:11:32,856] 324 root - INFO - ML check report written: 02_artifacts\a1_ingested_ML\ML_check_report.xlsx
+[2026-11-24 01:11:32,857] 174 root - INFO - Completed ML data ingestion (stored state + years: 2, experiments: 4280)
+[2026-11-24 01:11:32,858] 59 root - INFO - Entered Method create_directories
+[2026-11-24 01:11:32,858] 63 root - INFO - Directory created: 02_artifacts\a1_ingested_ML
+[2026-11-24 01:11:32,858] 64 root - INFO - Exited Method create_directories
+[2026-11-24 01:11:32,872] 28 root - INFO - CSV file saved at 02_artifacts\a1_ingested_ML\ingested_ML.csv (4280 rows)
+[2026-11-24 01:11:32,872] 50 root - INFO - Completed ML Ingestion pipeline
+[2026-11-24 01:12:39,111] 43 root - WARNING - ML_2025-26_v5.xlsx: REJECTED - 44 problem(s); report D:\Files\office\KrishiSoft\Collab_VSC\NSO_DGCES_TEST\03_Agri_App\02_artifacts\a1_ingested_ML\GUJARAT\2025-26\errors\2026-11-24_011239_ML_2025-26_v5_ERRORS.xlsx

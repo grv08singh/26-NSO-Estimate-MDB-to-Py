@@ -1,0 +1,87 @@
+﻿EXPTID,RECORD,SELAREATYPE,SURVNO,SURVAREA,SUBSREASON,SPECIFYSUBSREASON,CROPFIELDS,CROPAREA,REASONBIGSURVAREA,CULTNAME,INFORMANT,MISTSURV,SPECIFYMISTSURV,MISTSUBSURV,SPECIFYMISTSUBSURV,MISTFIELD,SPECIFYMISTFIELD,RECTSURV,RECTSUBSURV,RECTFIELD,DGCES_KEY,YR,SOURCE,SOURCE_FILE
+,3,1,633,0.12,,,,0.12,,Basudeo Bhindwar,,0,,0,,0,,,,,2025-26|Rabi|10|206|220013|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,3,1,732,0.06,,,,0.06,,Uday Kumar Bhindwar,,0,,0,,0,,,,,2025-26|Rabi|10|206|220013|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,61,0.39,,,,0.39,,Nripendra Narayan Singh,,0,,0,,0,,,,,2025-26|Rabi|10|211|217333|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,172,0.48,,,,0.48,,Vashishth Narayan Singh,,0,,0,,0,,,,,2025-26|Rabi|10|211|217333|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,1,1,274,0.0304,,,,0.0304,,vikram sah,,0,,0,,0,,,,,2025-26|Rabi|10|213|217477|Pigeon Pea|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,1,1,275,0.024,,,,0.024,,shiv jee sah,,0,,0,,0,,,,,2025-26|Rabi|10|213|217477|Pigeon Pea|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,782,0.02,0,,,0.02,,Parsuram Choudhary,,0,,0,,0,,,,,2025-26|Rabi|10|222|231524|Pigeon Pea|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,784,0.03,,,,0.03,,Gorakh Sah,,0,,0,,0,,,,,2025-26|Rabi|10|222|231524|Pigeon Pea|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,2578,0.03,,,,0.03,,Wasim Iqbal,,0,,0,,0,,,,,2025-26|Rabi|10|222|231601|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,2580,0.02,,,,0.02,,Sami Alam,,0,,0,,0,,,,,2025-26|Rabi|10|222|231601|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,495,0.067,,,,0.067,,hiralal gor,,0,,0,,0,,,,,2025-26|Rabi|10|222|231973|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,451,0.047,,,,0.047,,putul devi,,0,,0,,0,,,,,2025-26|Rabi|10|222|231973|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,2405,0.13,0,,,0.13,,Chandan Kushwaha,,9,Highest plot no has been wrongly reported as 7044  and finally selected survey no. 2405. So correct Highest plot will be 2254 and finally selected survey no-,0,,9,Type of mistake not given in DGCES data,0,,0,2025-26|Rabi|10|222|232121|Pigeon Pea|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,1135,0.07,0,,,0.07,,Jai prakash kushwaha,,0,,0,,0,,,,,2025-26|Rabi|10|222|232121|Pigeon Pea|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,13,0.01,0,,,0.01,,arun pandey,,0,,0,,0,,,,,2025-26|Rabi|10|222|232304|Pigeon Pea|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,1186,0.161,0,,,0.161,,nitu devi,,0,,0,,0,,,,,2025-26|Rabi|10|222|232304|Pigeon Pea|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,57,0.19,9,Other agricultural use,,0.08,,Nagendra pd yadav,,0,,0,,0,,,,,2025-26|Rabi|10|208|228982|Pigeon Pea|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,63,0.2,9,Other agricultural use,,0.09,,Uday Kumar,,0,,0,,0,,,,,2025-26|Rabi|10|208|228982|Pigeon Pea|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,1,1,325/1,0.91,9,Other agricultural use,,0.08,,Nawal Kishor Singh,,0,,0,,0,,,,,2025-26|Rabi|10|208|229027|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,1,1,167,0.15,,,,0.15,,Sanjay Kumar,,0,,0,,0,,,,,2025-26|Rabi|10|208|229027|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,3,1,196,0.04,0,,,0.04,,bhusan kumar,,0,,0,,0,,,,,2025-26|Rabi|10|218|233084|Pigeon Pea|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,3,1,178,0.06,0,,,0.06,,Punayadeo Rai,,0,,0,,0,,,,,2025-26|Rabi|10|218|233084|Pigeon Pea|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,3,1,3772,0.15,,,,0.15,,Madhav Singh,,0,,0,,0,,,,,2025-26|Rabi|10|221|219564|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,3,1,3819,0.11,,,,0.11,,Naredra Rai,,0,,0,,0,,,,,2025-26|Rabi|10|221|219564|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,3,1,1815,0.08,0,,,0.08,,Mukesh Kumar Sah,,0,,0,,0,,,,,2025-26|Rabi|10|221|219750|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,3,1,2673,0.14,0,,,0.14,,ramsagar yadav,,0,,0,,0,,,,,2025-26|Rabi|10|221|219750|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,1,1,282,0.18,,,,0.18,,Pappu Kumar Ram,,0,,0,,0,,,,,2025-26|Rabi|10|224|234907|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,1,1,361,0.09,0,,,0.09,,Shyam Sundar Ram,,0,,0,,0,,,,,2025-26|Rabi|10|224|234907|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,4,2,146,0.05,9,Other agricultural use,,0.03,,upendra prasad singh,,0,,0,,0,,,,,2025-26|Rabi|10|224|235644|Pigeon Pea|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,4,1,151,0.05,9,Other agricultural use,,0.025,,vijay singh,,0,,0,,0,,,,,2025-26|Rabi|10|224|235644|Pigeon Pea|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,3,1,5533,0.09,0,,,0.09,,Ramesh kumar singh,,0,,0,,0,,,,,2025-26|Rabi|10|224|236085|Pigeon Pea|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,3,1,5249,0.07,,,,0.07,,Arvind Paswan,,0,,0,,0,,,,,2025-26|Rabi|10|224|236085|Pigeon Pea|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,412,0.41,0,,,0.41,,surendra Prasad thakur,,0,,0,,0,,,,,2025-26|Rabi|10|188|221608|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,310,0.03,0,,,0.03,,rakesh kumar suman,,0,,0,,0,,,,,2025-26|Rabi|10|188|221608|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,3,2,471/1,0.138,0,,,0.138,,Devendra yadav,,0,,0,,0,,,,,2025-26|Rabi|10|202|238672|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,3,2,474/1,0.75,0,,,0.075,,Bechu yadav,,0,,0,,0,,,,,2025-26|Rabi|10|202|238672|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,3,1,104,0.64,0,,,0.64,,mahanthi lal singh,,0,,0,,0,,,,,2025-26|Rabi|10|202|238762|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,3,1,111,1.996,0,,,1.996,,Mera devi,,0,,0,,0,,,,,2025-26|Rabi|10|202|238762|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,3,2,8261,0.02,0,,,0.02,,Devendra Kumar,,0,,0,,0,,,,,2025-26|Rabi|10|205|225905|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,3,2,5899,0.24,0,,,0.24,,Shashi Kumar Suman,,0,,0,,0,,,,,2025-26|Rabi|10|205|225905|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,2,752/752,0.08,,,,0.08,,Banti kumar,,0,,9,Type of mistake not given in DGCES data,9,Type of mistake not given in DGCES data,,0,0,2025-26|Rabi|10|214|223274|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,2,138/138,0.22,0,,,0.08,,Bipin Kumar,,9,Type of mistake not given in DGCES data,9,Type of mistake not given in DGCES data,9,Type of mistake not given in DGCES data,1,1,1,2025-26|Rabi|10|214|223274|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,2,14/2,0.12,,,,0.12,,Maghrul haque,,0,,0,,0,,,,,2025-26|Rabi|10|214|223709|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,2,10/2,0.16,0,,,0.16,,MD Ekbal,,0,,0,,0,,,,,2025-26|Rabi|10|214|223709|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,54,0.13,,,,0.13,,Pankaj kumar,,0,,0,,0,,,,,2025-26|Rabi|10|216|226477|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,114,0.212,,,,0.212,,Sanjay kumar,,0,,0,,0,,,,,2025-26|Rabi|10|216|226477|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,203,0.13,0,,,0.13,,Suresh kumar,,0,,0,,0,,,,,2025-26|Rabi|10|223|221379|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,1057,0.14,0,,,0.14,,Saroj kr mandal,,0,,0,,0,,,,,2025-26|Rabi|10|223|221379|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,3,1,441,0.048,0,,,0.048,,Umesh Prasad Mehta,,0,,0,,0,,,,,2025-26|Rabi|10|223|221385|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,3,1,800,0.089,0,,,0.089,,Subash kumar Metha,,0,,0,,0,,,,,2025-26|Rabi|10|223|221385|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,557,0.32,0,,,0.32,,sikandra yadav,,0,,0,,0,,,,,2025-26|Rabi|10|223|221413|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,364,0.22,0,,,0.22,,Dyashankar Yadav,,0,,0,,0,,,,,2025-26|Rabi|10|223|221413|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,31,0.09,0,,,0.09,,dharmavir kumar,,0,,0,,0,,,,,2025-26|Rabi|10|204|243560|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,21,0.05,0,,,0.05,,gunguna singh,,0,,0,,0,,,,,2025-26|Rabi|10|204|243560|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,62,0.28,0,,,0.28,,vikash singh,,0,,0,,0,,,,,2025-26|Rabi|10|204|243718|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,684,0.03,0,,,0.03,,RAMESH KUMAR,,0,,0,,0,,,,,2025-26|Rabi|10|204|243718|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,1,1,472,0.05,0,,,0.5,,dharmendar chandravanshi,,0,,0,,0,,,,,2025-26|Rabi|10|189|252750|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,3,1,484,0.02,,,,0.02,,nagendar mahto,,0,,0,,0,,,,,2025-26|Rabi|10|189|252750|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,4,1,892,0.094,0,,,0.094,,Dharmendra Kumar,,0,,0,,0,,,,,2025-26|Rabi|10|189|252773|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,4,1,875,0.091,0,,,0.091,,Sanjit Kumar,,0,,0,,0,,,,,2025-26|Rabi|10|189|252773|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,3,1,872,0.04,,,,0.04,,sudama bhagat,,0,,0,,0,,,,,2025-26|Rabi|10|189|253605|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,3,1,1685,0.02,0,,,0.02,,Dilup tiwari,,0,,0,,0,,,,,2025-26|Rabi|10|189|253605|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,1,1,234,0.084,0,,,0.052,,UPENDER SINGH,,0,,0,,0,,,,,2025-26|Rabi|10|189|253669|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,1,1,488,0.02,,,,0.02,,umesh pal,,0,,0,,0,,,,,2025-26|Rabi|10|189|253669|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,3,1,2283,0.32,,,,0.32,,Gokul gop,,0,,0,,0,,,,,2025-26|Rabi|10|189|254332|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,3,1,81,0.09,,,,0.09,,Lalita devi,,0,,0,,0,,,,,2025-26|Rabi|10|189|254332|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,4,1,125,0.034,,,,0.034,,Birendra Yadav,,0,,0,,0,,,,,2025-26|Rabi|10|196|257263|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,4,1,286,0.044,,,,0.044,,Bhola Yadav,,0,,0,,0,,,,,2025-26|Rabi|10|196|257263|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,4,1,415,0.056,,,,0.056,,Mahendra Prasad,,0,,0,,0,,,,,2025-26|Rabi|10|210|257829|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,4,1,234,0.037,,,,0.037,,Lakhan Paswan,,0,,0,,0,,,,,2025-26|Rabi|10|210|257829|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,4,1,454,0.07,,,,0.07,,Ravi Shankar Yadav,,0,,0,,0,,,,,2025-26|Rabi|10|193|246597|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,4,1,366,0.19,,,,0.19,,Mantosh Yadav,,0,,0,,0,,,,,2025-26|Rabi|10|193|246597|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,2,603/1,0.11,0,,,0.11,,radhhesayam singh,,0,,0,,0,,,,,2025-26|Rabi|10|193|246992|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,2,1624/1,0.08,0,,,0.08,,kmldev singh,,0,,0,,0,,,,,2025-26|Rabi|10|193|246992|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,1,2,42,0.25,0,,,0.25,,Amlendra kumar singh,,0,,0,,0,,,,,2025-26|Rabi|10|193|247022|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,1,2,134,0.125,0,,,0.125,,Akhilesh kumar,,0,,0,,0,,,,,2025-26|Rabi|10|193|247022|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,1,1,435,0.1,,,,0.1,,Dhananjay Singh,,0,,0,,0,,,,,2025-26|Rabi|10|193|247101|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,1,1,439,0.14,,,,0.14,,Arvind Kumar Singh,,0,,0,,0,,,,,2025-26|Rabi|10|193|247101|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,1,2,563,0.0598,,,,0,,Ashok kumar singh,,0,,0,,0,,,,,2025-26|Rabi|10|193|247256|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,2,51,0.063,0,,,0.063,,sunil kumar singh,,0,,0,,0,,,,,2025-26|Rabi|10|193|247256|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,2,163,0.303,0,,,0.182,,Shri Pravin Singh,,0,,0,,0,,,,,2025-26|Rabi|10|193|247396|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,11,0.072,0,,,0.072,,Shri Damodar Singh,,0,,0,,0,,,,,2025-26|Rabi|10|193|247396|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,1,1,130,0.154,,,,0.154,,Vijay Pandey,,0,,0,,0,,,,,2025-26|Rabi|10|193|247638|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,1,1,220,0.073,,,,0.073,,Rama shankar Pandey,,0,,0,,0,,,,,2025-26|Rabi|10|193|247638|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,147,0.086,,,,0.086,,Sri santosh kumar singh,,0,,0,,0,,,,,2025-26|Rabi|10|193|247788|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,2,1,155,0.282,,,,0.282,,Sri Narad Muni Singh,,0,,0,,0,,,,,2025-26|Rabi|10|193|247788|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx

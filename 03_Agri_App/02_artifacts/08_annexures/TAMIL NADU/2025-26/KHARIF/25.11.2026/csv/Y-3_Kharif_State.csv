@@ -1,0 +1,13 @@
+﻿Crop,Checked (harvest + post harvest),Delegated to equivalent / senior person: trained,Delegated to equivalent / senior person: untrained,Delegated to equivalent / senior person: training n.a.,Delegated to equivalent / senior person: total,Delegated to juniors: trained,Delegated to juniors: untrained,Delegated to juniors: training n.a.,Delegated to juniors: total,Designated person (no change in primary worker): trained,Designated person (no change in primary worker): untrained,Designated person (no change in primary worker): training n.a.,Designated person (no change in primary worker): total
+Jowar (3),40,0,0,0,0,0,0,0,0,40,0,0,40
+Bajra (5),38,1,0,0,1,0,0,0,0,37,0,0,37
+Maize (6),40,0,0,0,0,0,0,0,0,38,2,0,40
+Redgram (11),40,1,0,0,1,0,0,0,0,34,1,4,39
+Cotton (12),10,0,0,0,0,0,0,0,0,10,0,0,10
+Sugarcane (14),38,0,0,0,0,0,0,0,0,38,0,0,38
+Groundnut (15),34,0,0,0,0,0,0,0,0,32,0,2,34
+Gingelly (33),34,0,0,0,0,0,0,0,0,34,0,0,34
+Cotton (55),30,0,0,0,0,0,0,0,0,30,0,0,30
+Paddy (91),38,0,0,0,0,0,0,0,0,37,0,1,38
+Paddy (92),54,0,0,0,0,0,0,0,0,54,0,0,54
+All crops,396,2,0,0,2,0,0,0,0,384,3,7,394

@@ -1,0 +1,110 @@
+[2026-11-24 15:53:02,642] 156 root - INFO - Copied BR_NSSAS2025.mdb -> 01_raw_data\01_importschedules\MDB\MULTI-STATE\2025-26\BR_NSSAS2025.mdb
+[2026-11-24 15:53:02,645] 39 root - INFO - Starting 1. Import Schedules pipeline
+[2026-11-24 15:53:02,645] 49 root - INFO - Input path: 01_raw_data\01_importschedules
+[2026-11-24 15:53:02,646] 50 root - INFO - Output path: 02_artifacts\01_importschedules\ingested_sch.csv
+[2026-11-24 15:53:02,646] 51 root - INFO - DGCES sample: 1
+[2026-11-24 15:53:02,646] 59 root - INFO - Entered Method create_directories
+[2026-11-24 15:53:02,646] 63 root - INFO - Directory created: 02_artifacts\01_importschedules
+[2026-11-24 15:53:02,647] 64 root - INFO - Exited Method create_directories
+[2026-11-24 15:53:02,647] 378 root - INFO - Entered ingest_data method of ImportSchedules class
+[2026-11-24 15:53:02,648] 118 root - INFO - Discovered 2 schedule files in 01_raw_data\01_importschedules (with sub-folders)
+[2026-11-24 15:53:02,990] 306 root - INFO - Loaded MDB/BIHAR/2025-26/F110020408352_8Jun2026_C4BR02WHEAT_HYI0422025-26.mdb: 1 RC-7 rows, 13 block tables
+[2026-11-24 15:53:03,445] 306 root - INFO - Loaded MDB/MULTI-STATE/2025-26/BR_NSSAS2025.mdb: 1668 RC-7 rows, 13 block tables
+[2026-11-24 15:53:03,469] 382 root - INFO - Files: 2 read, 0 unchanged (taken from the cache)
+[2026-11-24 15:53:03,521] 416 root - INFO - Exited ingest_data method of ImportSchedules class (RC-7 rows: 1668, block tables: 13, DGCES experiments: 0)
+[2026-11-24 15:53:03,534] 64 root - INFO - Saved RC-7 data to 02_artifacts\01_importschedules\ingested_sch.csv (shape: (1668, 67))
+[2026-11-24 15:53:03,540] 442 root - INFO - Saved mdb/Sch20Block1.csv (1650 rows)
+[2026-11-24 15:53:03,544] 442 root - INFO - Saved mdb/Sch20Block2.csv (1641 rows)
+[2026-11-24 15:53:03,549] 442 root - INFO - Saved mdb/Sch20Block3.csv (3282 rows)
+[2026-11-24 15:53:03,553] 442 root - INFO - Saved mdb/Sch20Block4.csv (3186 rows)
+[2026-11-24 15:53:03,556] 442 root - INFO - Saved mdb/Sch20Block5p1.csv (1527 rows)
+[2026-11-24 15:53:03,559] 442 root - INFO - Saved mdb/Sch20Block6.csv (1641 rows)
+[2026-11-24 15:53:03,562] 442 root - INFO - Saved mdb/Sch20Block7.csv (1641 rows)
+[2026-11-24 15:53:03,568] 442 root - INFO - Saved mdb/Sch20Block8P1.csv (4923 rows)
+[2026-11-24 15:53:03,575] 442 root - INFO - Saved mdb/Sch20Block8P2.csv (3282 rows)
+[2026-11-24 15:53:03,580] 442 root - INFO - Saved mdb/Sch20Block9P1.csv (3282 rows)
+[2026-11-24 15:53:03,591] 442 root - INFO - Saved mdb/Sch20Block9P2.csv (9821 rows)
+[2026-11-24 15:53:03,594] 442 root - INFO - Saved mdb/Sch20Block10.csv (1641 rows)
+[2026-11-24 15:53:03,599] 442 root - INFO - Saved mdb/Sch20Block12.csv (1641 rows)
+[2026-11-24 15:53:03,609] 442 root - INFO - Saved mdb/Sch20RC7.csv (1668 rows)
+[2026-11-24 15:53:03,621] 442 root - INFO - Saved clubbed/Sch20RC7.csv (1668 rows)
+[2026-11-24 15:53:03,626] 442 root - INFO - Saved clubbed/Sch20Block1.csv (1650 rows)
+[2026-11-24 15:53:03,630] 442 root - INFO - Saved clubbed/Sch20Block2.csv (1641 rows)
+[2026-11-24 15:53:03,635] 442 root - INFO - Saved clubbed/Sch20Block3.csv (3282 rows)
+[2026-11-24 15:53:03,639] 442 root - INFO - Saved clubbed/Sch20Block4.csv (3186 rows)
+[2026-11-24 15:53:03,642] 442 root - INFO - Saved clubbed/Sch20Block5p1.csv (1527 rows)
+[2026-11-24 15:53:03,645] 442 root - INFO - Saved clubbed/Sch20Block6.csv (1641 rows)
+[2026-11-24 15:53:03,648] 442 root - INFO - Saved clubbed/Sch20Block7.csv (1641 rows)
+[2026-11-24 15:53:03,654] 442 root - INFO - Saved clubbed/Sch20Block8P1.csv (4923 rows)
+[2026-11-24 15:53:03,661] 442 root - INFO - Saved clubbed/Sch20Block8P2.csv (3282 rows)
+[2026-11-24 15:53:03,666] 442 root - INFO - Saved clubbed/Sch20Block9P1.csv (3282 rows)
+[2026-11-24 15:53:03,677] 442 root - INFO - Saved clubbed/Sch20Block9P2.csv (9821 rows)
+[2026-11-24 15:53:03,679] 442 root - INFO - Saved clubbed/Sch20Block10.csv (1641 rows)
+[2026-11-24 15:53:03,684] 442 root - INFO - Saved clubbed/Sch20Block12.csv (1641 rows)
+[2026-11-24 15:53:03,691] 485 root - INFO - Schedule ingestion report written: 02_artifacts\01_importschedules\report
+[2026-11-24 15:53:03,693] 90 root - INFO - Import log: 1 file(s) -> 02_artifacts\01_importschedules\report\Last_import.csv; history 02_artifacts\01_importschedules\import_history.csv
+[2026-11-24 15:53:03,693] 68 root - INFO - Completed 1. Import Schedules pipeline
+[2026-11-24 15:53:18,464] 156 root - INFO - Copied DGCES_DataSharedToNSO_Revised.xlsx -> 01_raw_data\01_importschedules\DGCES\BIHAR\2025-26\DGCES_DataSharedToNSO_Revised.xlsx
+[2026-11-24 15:53:18,467] 39 root - INFO - Starting 1. Import Schedules pipeline
+[2026-11-24 15:53:18,467] 49 root - INFO - Input path: 01_raw_data\01_importschedules
+[2026-11-24 15:53:18,467] 50 root - INFO - Output path: 02_artifacts\01_importschedules\ingested_sch.csv
+[2026-11-24 15:53:18,467] 51 root - INFO - DGCES sample: 1
+[2026-11-24 15:53:18,467] 59 root - INFO - Entered Method create_directories
+[2026-11-24 15:53:18,468] 63 root - INFO - Directory created: 02_artifacts\01_importschedules
+[2026-11-24 15:53:18,468] 64 root - INFO - Exited Method create_directories
+[2026-11-24 15:53:18,468] 378 root - INFO - Entered ingest_data method of ImportSchedules class
+[2026-11-24 15:53:18,469] 118 root - INFO - Discovered 3 schedule files in 01_raw_data\01_importschedules (with sub-folders)
+[2026-11-24 15:53:18,654] 187 src.components.c01_dgces_rc7.loader - INFO - Read 86 S rows and 86 PW rows from 01_raw_data\01_importschedules\DGCES\BIHAR\2025-26\DGCES_DataSharedToNSO_Revised.xlsx
+[2026-11-24 15:53:18,691] 363 root - INFO - DGCES DGCES/BIHAR/2025-26/DGCES_DataSharedToNSO_Revised.xlsx: 86 experiments (0 without PW row), sample Central; EXPTID waits for the order of selection; 180 issue(s)
+[2026-11-24 15:53:18,695] 382 root - INFO - Files: 1 read, 2 unchanged (taken from the cache)
+[2026-11-24 15:53:18,750] 416 root - INFO - Exited ingest_data method of ImportSchedules class (RC-7 rows: 1668, block tables: 13, DGCES experiments: 86)
+[2026-11-24 15:53:18,762] 64 root - INFO - Saved RC-7 data to 02_artifacts\01_importschedules\ingested_sch.csv (shape: (1668, 67))
+[2026-11-24 15:53:18,774] 442 root - INFO - Saved mdb/Sch20Block1.csv (1650 rows)
+[2026-11-24 15:53:18,779] 442 root - INFO - Saved mdb/Sch20Block2.csv (1641 rows)
+[2026-11-24 15:53:18,784] 442 root - INFO - Saved mdb/Sch20Block3.csv (3282 rows)
+[2026-11-24 15:53:18,788] 442 root - INFO - Saved mdb/Sch20Block4.csv (3186 rows)
+[2026-11-24 15:53:18,791] 442 root - INFO - Saved mdb/Sch20Block5p1.csv (1527 rows)
+[2026-11-24 15:53:18,794] 442 root - INFO - Saved mdb/Sch20Block6.csv (1641 rows)
+[2026-11-24 15:53:18,796] 442 root - INFO - Saved mdb/Sch20Block7.csv (1641 rows)
+[2026-11-24 15:53:18,803] 442 root - INFO - Saved mdb/Sch20Block8P1.csv (4923 rows)
+[2026-11-24 15:53:18,809] 442 root - INFO - Saved mdb/Sch20Block8P2.csv (3282 rows)
+[2026-11-24 15:53:18,814] 442 root - INFO - Saved mdb/Sch20Block9P1.csv (3282 rows)
+[2026-11-24 15:53:18,826] 442 root - INFO - Saved mdb/Sch20Block9P2.csv (9821 rows)
+[2026-11-24 15:53:18,828] 442 root - INFO - Saved mdb/Sch20Block10.csv (1641 rows)
+[2026-11-24 15:53:18,833] 442 root - INFO - Saved mdb/Sch20Block12.csv (1641 rows)
+[2026-11-24 15:53:18,845] 442 root - INFO - Saved mdb/Sch20RC7.csv (1668 rows)
+[2026-11-24 15:53:18,846] 442 root - INFO - Saved dgces/Sch20Block1.csv (86 rows)
+[2026-11-24 15:53:18,847] 442 root - INFO - Saved dgces/Sch20Block2.csv (86 rows)
+[2026-11-24 15:53:18,849] 442 root - INFO - Saved dgces/Sch20Block3.csv (172 rows)
+[2026-11-24 15:53:18,849] 442 root - INFO - Saved dgces/Sch20Block3p1.csv (0 rows)
+[2026-11-24 15:53:18,850] 442 root - INFO - Saved dgces/Sch20Block4.csv (172 rows)
+[2026-11-24 15:53:18,852] 442 root - INFO - Saved dgces/Sch20Block5p1.csv (86 rows)
+[2026-11-24 15:53:18,852] 442 root - INFO - Saved dgces/Sch20Block5p2.csv (0 rows)
+[2026-11-24 15:53:18,853] 442 root - INFO - Saved dgces/Sch20Block5p3.csv (0 rows)
+[2026-11-24 15:53:18,854] 442 root - INFO - Saved dgces/Sch20Block6.csv (86 rows)
+[2026-11-24 15:53:18,855] 442 root - INFO - Saved dgces/Sch20Block7.csv (86 rows)
+[2026-11-24 15:53:18,856] 442 root - INFO - Saved dgces/Sch20Block8P1.csv (258 rows)
+[2026-11-24 15:53:18,858] 442 root - INFO - Saved dgces/Sch20Block8P2.csv (172 rows)
+[2026-11-24 15:53:18,859] 442 root - INFO - Saved dgces/Sch20Block9P1.csv (172 rows)
+[2026-11-24 15:53:18,860] 442 root - INFO - Saved dgces/Sch20Block9P2.csv (516 rows)
+[2026-11-24 15:53:18,861] 442 root - INFO - Saved dgces/Sch20Block10.csv (86 rows)
+[2026-11-24 15:53:18,862] 442 root - INFO - Saved dgces/Sch20Block12.csv (86 rows)
+[2026-11-24 15:53:18,863] 442 root - INFO - Saved dgces/Sch20RC7.csv (86 rows)
+[2026-11-24 15:53:18,864] 442 root - INFO - Saved dgces/DGCES_ID.csv (86 rows)
+[2026-11-24 15:53:18,876] 442 root - INFO - Saved clubbed/Sch20RC7.csv (1754 rows)
+[2026-11-24 15:53:18,881] 442 root - INFO - Saved clubbed/Sch20Block1.csv (1736 rows)
+[2026-11-24 15:53:18,886] 442 root - INFO - Saved clubbed/Sch20Block2.csv (1727 rows)
+[2026-11-24 15:53:18,891] 442 root - INFO - Saved clubbed/Sch20Block3.csv (3454 rows)
+[2026-11-24 15:53:18,896] 442 root - INFO - Saved clubbed/Sch20Block4.csv (3358 rows)
+[2026-11-24 15:53:18,900] 442 root - INFO - Saved clubbed/Sch20Block5p1.csv (1613 rows)
+[2026-11-24 15:53:18,902] 442 root - INFO - Saved clubbed/Sch20Block6.csv (1727 rows)
+[2026-11-24 15:53:18,905] 442 root - INFO - Saved clubbed/Sch20Block7.csv (1727 rows)
+[2026-11-24 15:53:18,913] 442 root - INFO - Saved clubbed/Sch20Block8P1.csv (5181 rows)
+[2026-11-24 15:53:18,920] 442 root - INFO - Saved clubbed/Sch20Block8P2.csv (3454 rows)
+[2026-11-24 15:53:18,925] 442 root - INFO - Saved clubbed/Sch20Block9P1.csv (3454 rows)
+[2026-11-24 15:53:18,938] 442 root - INFO - Saved clubbed/Sch20Block9P2.csv (10337 rows)
+[2026-11-24 15:53:18,941] 442 root - INFO - Saved clubbed/Sch20Block10.csv (1727 rows)
+[2026-11-24 15:53:18,945] 442 root - INFO - Saved clubbed/Sch20Block12.csv (1727 rows)
+[2026-11-24 15:53:18,957] 485 root - INFO - Schedule ingestion report written: 02_artifacts\01_importschedules\report
+[2026-11-24 15:53:18,959] 90 root - INFO - Import log: 1 file(s) -> 02_artifacts\01_importschedules\report\Last_import.csv; history 02_artifacts\01_importschedules\import_history.csv
+[2026-11-24 15:53:18,959] 68 root - INFO - Completed 1. Import Schedules pipeline

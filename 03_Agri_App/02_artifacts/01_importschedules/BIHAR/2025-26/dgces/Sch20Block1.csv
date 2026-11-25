@@ -1,0 +1,87 @@
+﻿EXPTID,TEHSIL,SURVVILL,ORGVILL,REASON,SPECIFYREASON,SURVEYNO,DTINSPECT,INSPSTATE,PEGVISIBLE,REASONLOST,SPECIFYREASONLOST,ENTRUSTNAME,ENTRUSTDESIG,TRAINEDENTRUST,ENTRUSTTRG,DONEBYENTRUST,CONDUCTNAME,CONDUCTDESIG,CONDUCTRANK,TRAINEDCONDUCT,CONDUCTTRG,DGCES_KEY,YR,SOURCE,SOURCE_FILE
+,Laukaha,Jhanjpatti Doman,,0,,1038,13-04-2026,1,,,,HARE RAM,,1,03/2026,1,,,,,,2025-26|Rabi|10|206|220013|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Laukaha,Jhanjpatti Doman,,0,,1038,13-04-2026,1,,,,HARE RAM,,1,03/2026,1,,,,,,2025-26|Rabi|10|206|220013|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Majhaulia,Arazi Nankar,,0,,196,12-04-2026,1,,,,GYANESHWAR KUMAR,,1,10/2025,1,,,,,,2025-26|Rabi|10|211|217333|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Majhaulia,Arazi Nankar,,0,,196,12-04-2026,1,,,,GYANESHWAR KUMAR,,1,10/2025,1,,,,,,2025-26|Rabi|10|211|217333|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Raxaul,Ekderwa,,0,,724,16-04-2026,1,,,,ANJALI SINGH,,1,12/2025,1,,,,,,2025-26|Rabi|10|213|217477|Pigeon Pea|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Raxaul,Ekderwa,,0,,724,16-04-2026,1,,,,ANJALI SINGH,,1,12/2025,1,,,,,,2025-26|Rabi|10|213|217477|Pigeon Pea|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Barharia,Dumri,Pakri,1,,803,12-04-2026,1,,,,AJAY PASWAN,,1,01/2026,1,,,,,,2025-26|Rabi|10|222|231524|Pigeon Pea|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Barharia,Dumri,Pakri,1,,803,12-04-2026,1,,,,AJAY PASWAN,,1,01/2026,1,,,,,,2025-26|Rabi|10|222|231524|Pigeon Pea|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Goriakothi,Dudhra,,0,,5002,07-04-2026,1,,,,ABHAY MISHRA,,1,01/2026,1,,,,,,2025-26|Rabi|10|222|231601|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Goriakothi,Dudhra,,0,,5002,07-04-2026,1,,,,ABHAY MISHRA,,1,01/2026,1,,,,,,2025-26|Rabi|10|222|231601|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Pachrukhi,Nathanpura,,0,,2583,14-04-2026,1,,,,AJAY PASWAN,,1,01/2026,1,,,,,,2025-26|Rabi|10|222|231973|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Pachrukhi,Nathanpura,,0,,2583,14-04-2026,1,,,,AJAY PASWAN,,1,01/2026,1,,,,,,2025-26|Rabi|10|222|231973|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Mairwa,Muriyari,Kuldipa,1,,7044,10-04-2026,1,,,,RAJESH RAM,,1,04/2026,1,,,,,,2025-26|Rabi|10|222|232121|Pigeon Pea|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Mairwa,Muriyari,Kuldipa,1,,2554,10-04-2026,1,,,,RAJESH RAM,,1,10/2025,1,,,,,,2025-26|Rabi|10|222|232121|Pigeon Pea|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Darauli,Belsui,,0,,1608,05-04-2026,1,,,,RajanKumar Singh,,2,,1,,,,,,2025-26|Rabi|10|222|232304|Pigeon Pea|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Darauli,Belsui,,0,,1608,05-04-2026,1,,,,RajanKumar Singh,,2,,1,,,,,,2025-26|Rabi|10|222|232304|Pigeon Pea|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Aurai,Dharharwa Urf Parri Dharharwa,Anandpur Ghani,1,,8075,13-04-2026,1,,,,Vineet Kumar,,1,01/2026,1,,,,,,2025-26|Rabi|10|208|228982|Pigeon Pea|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Aurai,Dharharwa Urf Parri Dharharwa,Anandpur Ghani,1,,8075,13-04-2026,1,,,,Vineet Kumar,,1,01/2026,1,,,,,,2025-26|Rabi|10|208|228982|Pigeon Pea|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Aurai,Anandpur Ghani,,0,,562,07-04-2026,1,,,,Vineet Kumar,,1,01/2026,1,,,,,,2025-26|Rabi|10|208|229027|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Aurai,Anandpur Ghani,,0,,562,07-04-2026,1,,,,Vineet Kumar,,1,01/2026,1,,,,,,2025-26|Rabi|10|208|229027|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Ishupur,Piarepur,Gobinapur,1,,1062,16-04-2026,1,,,,Pintu Kumar,,1,01/2026,1,,,,,,2025-26|Rabi|10|218|233084|Pigeon Pea|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Ishupur,Piarepur,Gobinapur,1,,1062,16-04-2026,1,,,,Pintu Kumar,,1,01/2026,1,,,,,,2025-26|Rabi|10|218|233084|Pigeon Pea|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Dumra,Rupaulitola Dhanuki,,0,,6638,14-04-2026,1,,,,DHIRAJ KUMAR,,1,02/2026,1,,,,,,2025-26|Rabi|10|221|219564|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Dumra,Rupaulitola Dhanuki,,0,,6638,14-04-2026,1,,,,DHIRAJ KUMAR,,1,02/2026,1,,,,,,2025-26|Rabi|10|221|219564|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Nanpur,Dadri,,0,,13046,11-04-2026,1,,,,SUSHIL KUMAR,,1,03/2026,1,,,,,,2025-26|Rabi|10|221|219750|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Nanpur,Dadri,,0,,13046,11-04-2026,1,,,,SUSHIL KUMAR,,1,03/2026,1,,,,,,2025-26|Rabi|10|221|219750|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Bhagwanpur,Jankipur,,0,,367,09-04-2026,1,,,,Ravi Kumar,,2,,1,,,,,,2025-26|Rabi|10|224|234907|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Bhagwanpur,Jankipur,,0,,367,09-04-2026,1,,,,Ravi Kumar,,2,,1,,,,,,2025-26|Rabi|10|224|234907|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Hajipur,Kutubpur Ekara,,0,,1471,10-04-2026,1,,,,Arun Kumar,,1,09/2024,1,,,,,,2025-26|Rabi|10|224|235644|Pigeon Pea|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Hajipur,Kutubpur Ekara,,0,,1471,10-04-2026,1,,,,Arun Kumar,,1,09/2024,1,,,,,,2025-26|Rabi|10|224|235644|Pigeon Pea|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Mahnar,Chamrahra,Bharhan,1,,5962,18-04-2026,1,,,,Ranjeet Kumar,,1,01/2025,1,,,,,,2025-26|Rabi|10|224|236085|Pigeon Pea|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Mahnar,Chamrahra,Bharhan,1,,5962,18-04-2026,1,,,,Ranjeet Kumar,,1,01/2025,1,,,,,,2025-26|Rabi|10|224|236085|Pigeon Pea|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Forbesganj,Hatpothia,,0,,452,06-04-2026,1,,,,PRABHASH PATHAK,,1,07/2025,1,,,,,,2025-26|Rabi|10|188|221608|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Forbesganj,Hatpothia,,0,,452,06-04-2026,1,,,,PRABHASH PATHAK,,1,07/2025,1,,,,,,2025-26|Rabi|10|188|221608|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Chautham,Dhamhara,,0,,552,06-04-2026,1,,,,Mahesh Kumar,,1,02/2026,1,,,,,,2025-26|Rabi|10|202|238672|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Chautham,Dhamhara,,0,,552,06-04-2026,1,,,,Mahesh Kumar,,1,02/2026,1,,,,,,2025-26|Rabi|10|202|238672|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Gogri,Chandwa,,0,,1068,08-04-2026,1,,,,Aanandkumar Thakur,,1,02/2025,1,,,,,,2025-26|Rabi|10|202|238762|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Gogri,Chandwa,,0,,1068,08-04-2026,1,,,,Aanandkumar Thakur,,1,02/2025,1,,,,,,2025-26|Rabi|10|202|238762|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Shankarpur,Maura,,0,,25345,08-04-2026,1,,,,Taranand Mandal,,1,07/2025,1,,,,,,2025-26|Rabi|10|205|225905|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Shankarpur,Maura,,0,,25345,08-04-2026,1,,,,Taranand Mandal,,1,07/2025,1,,,,,,2025-26|Rabi|10|205|225905|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Rupauli,Mataili Khemchand,,0,,1467,03-04-2026,1,,,,AMIT KUMAR,,1,04/2026,1,,,,,,2025-26|Rabi|10|214|223274|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Rupauli,Mataili Khemchand,,0,,1467,04-04-2026,1,,,,AMIT KUMAR,,1,02/2026,1,,,,,,2025-26|Rabi|10|214|223274|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Amour,Majhua Bhag,,0,,19,13-04-2026,1,,,,JYOTISHCHANDRA SINGH,,1,01/2026,1,,,,,,2025-26|Rabi|10|214|223709|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Amour,Majhua Bhag,,0,,19,13-04-2026,1,,,,JYOTISHCHANDRA SINGH,,1,01/2026,1,,,,,,2025-26|Rabi|10|214|223709|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Saur Bazar,Ajgaiba,,0,,1141,08-04-2026,1,,,,Toshan Kumar,,1,01/2026,1,,,,,,2025-26|Rabi|10|216|226477|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Saur Bazar,Ajgaiba,,0,,1141,09-04-2026,1,,,,Toshan Kumar,,1,01/2026,1,,,,,,2025-26|Rabi|10|216|226477|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Pipra,Kataia Mahe,,0,,6447,11-04-2026,1,,,,Shailesh Kumar,,1,01/2026,1,,,,,,2025-26|Rabi|10|223|221379|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Pipra,Kataia Mahe,,0,,6447,11-04-2026,1,,,,Shailesh Kumar,,1,01/2026,1,,,,,,2025-26|Rabi|10|223|221379|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Pipra,Bishunpur,,0,,1869,07-04-2026,1,,,,Shailesh Kumar,,1,01/2026,1,,,,,,2025-26|Rabi|10|223|221385|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Pipra,Bishunpur,,0,,1869,07-04-2026,1,,,,Shailesh Kumar,,1,01/2026,1,,,,,,2025-26|Rabi|10|223|221385|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Tribeniganj,Bhura,,0,,1143,06-04-2026,1,,,,Shailesh Kumar,,1,01/2026,1,,,,,,2025-26|Rabi|10|223|221413|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Tribeniganj,Bhura,,0,,1143,06-04-2026,1,,,,Shailesh Kumar,,1,01/2026,1,,,,,,2025-26|Rabi|10|223|221413|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Surajgarha,Alakhpura,,0,,178,04-04-2026,1,,,,SUSHANT KUMAR,,1,12/2025,1,,,,,,2025-26|Rabi|10|204|243560|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Surajgarha,Alakhpura,,0,,178,04-04-2026,1,,,,SUSHANT KUMAR,,1,12/2025,1,,,,,,2025-26|Rabi|10|204|243560|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Ramgarh Chowk,Sondhi,,0,,833,04-04-2026,1,,,,ABHISHEK KUMAR,,1,01/2026,1,,,,,,2025-26|Rabi|10|204|243718|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Ramgarh Chowk,Sondhi,,0,,833,04-04-2026,1,,,,ABHISHEK KUMAR,,1,01/2026,1,,,,,,2025-26|Rabi|10|204|243718|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Daudnagar,Manar,,0,,2332,10-04-2026,1,,,,upendrakumar pal,,1,02/2026,1,,,,,,2025-26|Rabi|10|189|252750|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Daudnagar,Manar,,0,,2332,10-04-2026,1,,,,upendrakumar pal,,1,03/2026,1,,,,,,2025-26|Rabi|10|189|252750|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Haspura,Tankuppi,,0,,911,07-04-2026,1,,,,RAKESH KUMAR,,1,03/2026,1,,,,,,2025-26|Rabi|10|189|252773|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Haspura,Tankuppi,,0,,911,07-04-2026,1,,,,RAKESH KUMAR,,1,03/2026,1,,,,,,2025-26|Rabi|10|189|252773|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Barun,Pauthu,,0,,2186,14-04-2026,1,,,,Upendra Kumar,,1,03/2026,1,,,,,,2025-26|Rabi|10|189|253605|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Barun,Pauthu,,0,,2186,14-04-2026,1,,,,Upendra Kumar,,1,03/2026,1,,,,,,2025-26|Rabi|10|189|253605|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Barun,Rendia,,0,,518,16-04-2026,1,,,,OMPRAKASH DUBEY,,1,03/2026,1,,,,,,2025-26|Rabi|10|189|253669|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Barun,Rendia,,0,,518,16-04-2026,1,,,,OMPRAKASH DUBEY,,1,03/2026,1,,,,,,2025-26|Rabi|10|189|253669|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Deo,Kunda,,0,,2560,05-04-2026,1,,,,Jitendra Singh,,1,03/2026,1,,,,,,2025-26|Rabi|10|189|254332|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Deo,Kunda,,0,,2560,14-04-2026,1,,,,Jitendra Singh,,1,03/2026,1,,,,,,2025-26|Rabi|10|189|254332|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Mohanpur,Kadarchunan,,0,,296,06-04-2026,1,,,,Umakant Kamal,,1,12/2025,1,,,,,,2025-26|Rabi|10|196|257263|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Mohanpur,Kadarchunan,,0,,296,06-04-2026,1,,,,Umakant Kamal,,1,12/2025,1,,,,,,2025-26|Rabi|10|196|257263|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Roh,Adampur,,0,,848,04-04-2026,1,,,,ANAND KUMAR,,2,,1,,,,,,2025-26|Rabi|10|210|257829|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Roh,Adampur,,0,,848,04-04-2026,1,,,,ANAND KUMAR,,2,,1,,,,,,2025-26|Rabi|10|210|257829|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Shahpur,Sonbarsa,,0,,901,07-04-2026,1,,,,DINESH KUMAR,,1,01/2026,1,,,,,,2025-26|Rabi|10|193|246597|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Shahpur,Sonbarsa,,0,,901,07-04-2026,1,,,,DINESH KUMAR,,1,01/2026,1,,,,,,2025-26|Rabi|10|193|246597|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Sandesh,Dihra,,0,,2402,14-04-2026,1,,,,ABHISHEK CHAUDHARY,,1,03/2026,1,,,,,,2025-26|Rabi|10|193|246992|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Sandesh,Dihra,,0,,3342,14-04-2026,1,,,,ABHISHEK CHAUDHARY,,1,03/2026,1,,,,,,2025-26|Rabi|10|193|246992|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Sandesh,Mahadeopur,,0,,139,11-04-2026,1,,,,VIJAY MOHAN,,1,03/2026,1,,,,,,2025-26|Rabi|10|193|247022|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Sandesh,Mahadeopur,,0,,139,11-04-2026,1,,,,VIJAY MOHAN,,1,03/2026,1,,,,,,2025-26|Rabi|10|193|247022|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Udwant Nagar,Basauri,,0,,848,14-04-2026,1,,,,NARENDRA KUMARSINGH,,1,02/2026,1,,,,,,2025-26|Rabi|10|193|247101|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Udwant Nagar,Basauri,,0,,848,14-04-2026,1,,,,NARENDRA KUMARSINGH,,1,02/2026,1,,,,,,2025-26|Rabi|10|193|247101|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Jagdishpur,Mannu Dehri,,0,,1100,07-04-2026,1,,,,KRISHNA KUMAR,,1,03/2026,1,,,,,,2025-26|Rabi|10|193|247256|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Jagdishpur,Mannu Dehri,,0,,1100,07-04-2026,1,,,,KRISHNA KUMAR,,1,02/2026,1,,,,,,2025-26|Rabi|10|193|247256|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Piro,Harpur,,0,,171,14-04-2026,1,,,,PREM RANJAN,,1,03/2026,1,,,,,,2025-26|Rabi|10|193|247396|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Piro,Harpur,,0,,171,14-04-2026,1,,,,PREM RANJAN,,1,03/2026,1,,,,,,2025-26|Rabi|10|193|247396|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Tarari,Parariya,,0,,315,15-04-2026,1,,,,RAJMANI KUMAR,,1,02/2026,1,,,,,,2025-26|Rabi|10|193|247638|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Tarari,Parariya,,0,,315,15-04-2026,1,,,,RAJMANI KUMAR,,1,02/2026,1,,,,,,2025-26|Rabi|10|193|247638|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Sahar,Janaidih,,0,,176,11-04-2026,1,,,,RAJEEV KUMARRANJAN,,1,02/2026,1,,,,,,2025-26|Rabi|10|193|247788|Wheat|1,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx
+,Sahar,Janaidih,,0,,176,11-04-2026,1,,,,RAJEEV KUMARRANJAN,,1,02/2026,1,,,,,,2025-26|Rabi|10|193|247788|Wheat|2,2025,DGCES,DGCES/DGCES_DataSharedToNSO_Revised.xlsx

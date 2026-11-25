@@ -1,13 +1,35 @@
-artifacts_root: "artifacts"
+artifacts_root: "02_artifacts"
+database_root: "00_database"  # hidden folder: stored data, <NN_module>/<STATE>/<YEAR>/
+backup_root: "05_backup"      # copies made before stored data is replaced, <NN_module>/<STATE>/<YEAR>/<date-time>/
+# Under every top folder the module folders are named as the app's tabs: 00_masterlist, 01_importschedules,
+# 03_viewschedule, 02_controlregister, 04_datavalidation, 05_estimates, 06_estimatereport, 07_rc7, 08_annexures (04_src/utils/folders.py).
 
-ML_ingestion:
-  raw_ML_path: "01_raw_data/r0_MasterList"
-  ingested_ML_path: "artifacts/a1_ingested_ML/ingested_ML.csv"
+masterlist:
+  raw_ML_path: "01_raw_data/00_masterlist"
+  ingested_ML_path: "02_artifacts/00_masterlist"   # <STATE>/<YEAR>/ingested_ML.csv, ML_check_report_*.csv, MasterList_Summary_*.csv, errors/
 
-sch_ingestion:
-  raw_data_path: "01_raw_data/r1_RawSchedules"
-  ingested_sch_path: "artifacts/a2_ingested_sch/ingested_sch.csv"
+importschedules:                       # everything per state + year: <path>/<STATE>/<YEAR>/
+  raw_data_path: "01_raw_data/01_importschedules"     # <STATE>/<YEAR>/MDB/ and DGCES/ (picked files)
+  artifacts_path: "02_artifacts/01_importschedules"   # <STATE>/<YEAR>/ ingested_sch.csv, mdb/, dgces/, clubbed/, report/, import_history.csv
+  # database: 00_database/01_importschedules/<STATE>/<YEAR>/ file_cache/, dgces_samples.json
 
-RC7_preprocessing:
-  RC7_preprocessed_path: "artifacts/a3_RC7_preprocessed/preprocessed_RC7.csv"
-  RC7_corrected_path: "artifacts/a4_corrected_data/corrected_RC7.csv"
+# DGCES text -> Schedule 2.0 code, for the answers whose code is still to be decided.
+# Anything not listed becomes 9 (other) with the text kept in the 'specify' column.
+DGCES_codes:
+  irrigation_source:
+    canal: 1
+    tank: 2
+    state tube well: 3
+    private tube well: 4
+    well: 5
+    boring personal (diesel): 4
+    boring personal (electricity): 4
+    borewell: 4
+  manure:
+    farmyard manure: 1
+    farm yard manure: 1
+    green manure: 2
+  substitution_reason:
+    crop harvested prior to selection: 1
+    crop harvested before the date fixed: 2
+    field partially harvested: 3

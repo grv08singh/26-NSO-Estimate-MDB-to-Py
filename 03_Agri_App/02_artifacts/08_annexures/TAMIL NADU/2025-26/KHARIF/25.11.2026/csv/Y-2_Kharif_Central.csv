@@ -1,0 +1,13 @@
+﻿Crop,Planned,Checked at harvest,Missed: reason 1,Missed: reason 2,Missed: reason 3,Missed: reason 4,Missed: reason 9,Missed: total,Lost: reason 1,Lost: reason 2,Lost: reason 3,Lost: reason 4,Lost: reason 9,Lost: total,Missed and lost
+Jowar (3),80,78,1,0,0,0,0,1,0,0,0,0,0,0,1
+Bajra (5),50,42,0,0,0,0,0,0,0,0,0,0,8,8,8
+Maize (6),50,48,0,0,0,0,0,0,0,0,0,0,0,0,0
+Redgram (11),70,69,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cotton (12),20,16,0,0,0,0,0,0,0,0,0,0,2,2,2
+Sugarcane (14),70,69,0,0,0,0,0,0,0,0,0,0,0,0,0
+Groundnut (15),70,70,0,0,0,0,0,0,0,0,0,0,0,0,0
+Gingelly (33),40,18,0,0,0,0,16,16,0,0,0,0,6,6,22
+Cotton (55),50,48,0,0,0,0,0,0,0,0,0,0,2,2,2
+Paddy (91),60,51,0,0,0,0,4,4,0,0,0,0,5,5,9
+Paddy (92),80,78,0,0,0,0,0,0,0,0,0,0,0,0,0
+All crops,640,587,1,0,0,0,20,21,0,0,0,0,23,23,44

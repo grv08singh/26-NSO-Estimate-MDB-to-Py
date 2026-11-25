@@ -1,0 +1,13 @@
+﻿Crop,Planned,Checked at harvest,Checked at post harvest,Lost,Rejected for analysis,Schedules not received
+Jowar (3),80,78,1,0,0,1
+Bajra (5),50,42,0,8,0,0
+Maize (6),50,48,0,0,0,2
+Redgram (11),70,69,0,0,0,1
+Cotton (12),20,16,0,2,0,2
+Sugarcane (14),70,69,0,0,0,1
+Groundnut (15),70,70,0,0,0,0
+Gingelly (33),40,18,16,6,0,0
+Cotton (55),50,48,0,2,0,0
+Paddy (91),60,51,4,5,0,0
+Paddy (92),80,78,0,0,0,2
+All crops,640,587,21,23,0,9

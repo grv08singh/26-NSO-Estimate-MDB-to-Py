@@ -5,4 +5,5 @@ openpyxl
 ensure
 pyyaml
 joblib
+PySide6
 -e .

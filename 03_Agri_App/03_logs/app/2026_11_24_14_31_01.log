@@ -1,0 +1,212 @@
+[2026-11-24 14:31:01,729] 151 root - INFO - Copied ML_2_0_BR_2025-26.xlsx -> 01_raw_data\01_masterlist\BIHAR\2025-26\ML_2_0_BR_2025-26.xlsx
+[2026-11-24 14:31:01,732] 33 root - INFO - Starting 1. Master List pipeline
+[2026-11-24 14:31:01,732] 36 root - INFO - Input path: 01_raw_data\01_masterlist
+[2026-11-24 14:31:01,732] 37 root - INFO - Output folder: 02_artifacts\01_masterlist/<STATE>/<YEAR>/
+[2026-11-24 14:31:01,733] 59 root - INFO - Entered Method create_directories
+[2026-11-24 14:31:01,733] 63 root - INFO - Directory created: 02_artifacts\01_masterlist
+[2026-11-24 14:31:01,733] 64 root - INFO - Exited Method create_directories
+[2026-11-24 14:31:01,733] 122 root - INFO - Starting ML data ingestion (KrishiSoft checks, lenient, state / year wise)
+[2026-11-24 14:31:01,734] 113 root - INFO - Discovered 1 Excel files in 01_raw_data\01_masterlist (with sub-folders)
+[2026-11-24 14:31:02,173] 134 root - INFO - BIHAR/2025-26/ML_2_0_BR_2025-26.xlsx: OK - BIHAR 2025-26, 2250 experiments, 0 item(s) cleaned
+[2026-11-24 14:31:02,176] 153 root - INFO - BIHAR 2025-26 season 2: 540 experiments from BIHAR/2025-26/ML_2_0_BR_2025-26.xlsx
+[2026-11-24 14:31:02,176] 153 root - INFO - BIHAR 2025-26 season 3: 590 experiments from BIHAR/2025-26/ML_2_0_BR_2025-26.xlsx
+[2026-11-24 14:31:02,177] 153 root - INFO - BIHAR 2025-26 season 4: 1040 experiments from BIHAR/2025-26/ML_2_0_BR_2025-26.xlsx
+[2026-11-24 14:31:02,177] 153 root - INFO - BIHAR 2025-26 season 5: 80 experiments from BIHAR/2025-26/ML_2_0_BR_2025-26.xlsx
+[2026-11-24 14:31:02,211] 218 root - INFO - BIHAR 2025-26: new - 2250 experiments -> 00_database\01_masterlist\BIHAR\2025-26\master_list.csv
+[2026-11-24 14:31:02,247] 315 root - INFO - Check report written: 02_artifacts\01_masterlist\BIHAR\2025-26\ML_check_report_*.csv
+[2026-11-24 14:31:02,248] 177 root - INFO - Completed ML data ingestion (stored state + years: 1, experiments: 2250)
+[2026-11-24 14:31:02,249] 49 root - INFO - Completed 1. Master List pipeline
+[2026-11-24 14:31:08,574] 53 root - INFO - Error_ML_2_0_BR_2026-27.xlsx: passed - BIHAR 2026-27, 2250 experiments, 1 item(s) cleaned
+[2026-11-24 14:31:17,744] 53 root - INFO - ML_2025-26_v5.xlsx: passed - GUJARAT 2025-26, 2880 experiments, 0 item(s) cleaned
+[2026-11-24 14:31:23,757] 151 root - INFO - Copied ML_2025-26_v5.xlsx -> 01_raw_data\01_masterlist\GUJARAT\2025-26\ML_2025-26_v5.xlsx
+[2026-11-24 14:31:23,759] 33 root - INFO - Starting 1. Master List pipeline
+[2026-11-24 14:31:23,759] 36 root - INFO - Input path: 01_raw_data\01_masterlist
+[2026-11-24 14:31:23,760] 37 root - INFO - Output folder: 02_artifacts\01_masterlist/<STATE>/<YEAR>/
+[2026-11-24 14:31:23,760] 59 root - INFO - Entered Method create_directories
+[2026-11-24 14:31:23,760] 63 root - INFO - Directory created: 02_artifacts\01_masterlist
+[2026-11-24 14:31:23,760] 64 root - INFO - Exited Method create_directories
+[2026-11-24 14:31:23,761] 122 root - INFO - Starting ML data ingestion (KrishiSoft checks, lenient, state / year wise)
+[2026-11-24 14:31:23,761] 113 root - INFO - Discovered 2 Excel files in 01_raw_data\01_masterlist (with sub-folders)
+[2026-11-24 14:31:24,264] 134 root - INFO - BIHAR/2025-26/ML_2_0_BR_2025-26.xlsx: OK - BIHAR 2025-26, 2250 experiments, 0 item(s) cleaned
+[2026-11-24 14:31:24,871] 134 root - INFO - GUJARAT/2025-26/ML_2025-26_v5.xlsx: OK - GUJARAT 2025-26, 2880 experiments, 0 item(s) cleaned
+[2026-11-24 14:31:24,876] 153 root - INFO - BIHAR 2025-26 season 2: 540 experiments from BIHAR/2025-26/ML_2_0_BR_2025-26.xlsx
+[2026-11-24 14:31:24,877] 153 root - INFO - BIHAR 2025-26 season 3: 590 experiments from BIHAR/2025-26/ML_2_0_BR_2025-26.xlsx
+[2026-11-24 14:31:24,877] 153 root - INFO - BIHAR 2025-26 season 4: 1040 experiments from BIHAR/2025-26/ML_2_0_BR_2025-26.xlsx
+[2026-11-24 14:31:24,878] 153 root - INFO - BIHAR 2025-26 season 5: 80 experiments from BIHAR/2025-26/ML_2_0_BR_2025-26.xlsx
+[2026-11-24 14:31:24,878] 153 root - INFO - GUJARAT 2025-26 season 1: 2270 experiments from GUJARAT/2025-26/ML_2025-26_v5.xlsx
+[2026-11-24 14:31:24,878] 153 root - INFO - GUJARAT 2025-26 season 4: 510 experiments from GUJARAT/2025-26/ML_2025-26_v5.xlsx
+[2026-11-24 14:31:24,878] 153 root - INFO - GUJARAT 2025-26 season 5: 100 experiments from GUJARAT/2025-26/ML_2025-26_v5.xlsx
+[2026-11-24 14:31:24,898] 196 root - INFO - BIHAR 2025-26: unchanged (2250 experiments)
+[2026-11-24 14:31:24,928] 218 root - INFO - GUJARAT 2025-26: new - 2880 experiments -> 00_database\01_masterlist\GUJARAT\2025-26\master_list.csv
+[2026-11-24 14:31:24,994] 315 root - INFO - Check report written: 02_artifacts\01_masterlist\BIHAR\2025-26\ML_check_report_*.csv
+[2026-11-24 14:31:24,997] 315 root - INFO - Check report written: 02_artifacts\01_masterlist\GUJARAT\2025-26\ML_check_report_*.csv
+[2026-11-24 14:31:24,998] 177 root - INFO - Completed ML data ingestion (stored state + years: 2, experiments: 5130)
+[2026-11-24 14:31:24,998] 49 root - INFO - Completed 1. Master List pipeline
+[2026-11-24 14:31:42,683] 53 root - INFO - ML_2.0_TN_2024-25 - v2.xlsx: passed - TAMIL NADU 2024-25, 1560 experiments, 28 item(s) cleaned
+[2026-11-24 14:31:43,151] 53 root - INFO - ML_2.0_TN_2025-26.xlsx: passed - TAMIL NADU 2025-26, 1980 experiments, 32 item(s) cleaned
+[2026-11-24 14:31:48,192] 151 root - INFO - Copied ML_2.0_TN_2024-25 - v2.xlsx -> 01_raw_data\01_masterlist\TAMIL NADU\2024-25\ML_2.0_TN_2024-25 - v2.xlsx
+[2026-11-24 14:31:48,192] 151 root - INFO - Copied ML_2.0_TN_2025-26.xlsx -> 01_raw_data\01_masterlist\TAMIL NADU\2025-26\ML_2.0_TN_2025-26.xlsx
+[2026-11-24 14:31:48,195] 33 root - INFO - Starting 1. Master List pipeline
+[2026-11-24 14:31:48,195] 36 root - INFO - Input path: 01_raw_data\01_masterlist
+[2026-11-24 14:31:48,195] 37 root - INFO - Output folder: 02_artifacts\01_masterlist/<STATE>/<YEAR>/
+[2026-11-24 14:31:48,195] 59 root - INFO - Entered Method create_directories
+[2026-11-24 14:31:48,196] 63 root - INFO - Directory created: 02_artifacts\01_masterlist
+[2026-11-24 14:31:48,196] 64 root - INFO - Exited Method create_directories
+[2026-11-24 14:31:48,196] 122 root - INFO - Starting ML data ingestion (KrishiSoft checks, lenient, state / year wise)
+[2026-11-24 14:31:48,197] 113 root - INFO - Discovered 4 Excel files in 01_raw_data\01_masterlist (with sub-folders)
+[2026-11-24 14:31:48,699] 134 root - INFO - BIHAR/2025-26/ML_2_0_BR_2025-26.xlsx: OK - BIHAR 2025-26, 2250 experiments, 0 item(s) cleaned
+[2026-11-24 14:31:49,300] 134 root - INFO - GUJARAT/2025-26/ML_2025-26_v5.xlsx: OK - GUJARAT 2025-26, 2880 experiments, 0 item(s) cleaned
+[2026-11-24 14:31:49,613] 134 root - INFO - TAMIL NADU/2024-25/ML_2.0_TN_2024-25 - v2.xlsx: OK - TAMIL NADU 2024-25, 1560 experiments, 28 item(s) cleaned
+[2026-11-24 14:31:50,077] 134 root - INFO - TAMIL NADU/2025-26/ML_2.0_TN_2025-26.xlsx: OK - TAMIL NADU 2025-26, 1980 experiments, 32 item(s) cleaned
+[2026-11-24 14:31:50,084] 153 root - INFO - BIHAR 2025-26 season 2: 540 experiments from BIHAR/2025-26/ML_2_0_BR_2025-26.xlsx
+[2026-11-24 14:31:50,085] 153 root - INFO - BIHAR 2025-26 season 3: 590 experiments from BIHAR/2025-26/ML_2_0_BR_2025-26.xlsx
+[2026-11-24 14:31:50,085] 153 root - INFO - BIHAR 2025-26 season 4: 1040 experiments from BIHAR/2025-26/ML_2_0_BR_2025-26.xlsx
+[2026-11-24 14:31:50,086] 153 root - INFO - BIHAR 2025-26 season 5: 80 experiments from BIHAR/2025-26/ML_2_0_BR_2025-26.xlsx
+[2026-11-24 14:31:50,086] 153 root - INFO - GUJARAT 2025-26 season 1: 2270 experiments from GUJARAT/2025-26/ML_2025-26_v5.xlsx
+[2026-11-24 14:31:50,086] 153 root - INFO - GUJARAT 2025-26 season 4: 510 experiments from GUJARAT/2025-26/ML_2025-26_v5.xlsx
+[2026-11-24 14:31:50,086] 153 root - INFO - GUJARAT 2025-26 season 5: 100 experiments from GUJARAT/2025-26/ML_2025-26_v5.xlsx
+[2026-11-24 14:31:50,087] 153 root - INFO - TAMIL NADU 2024-25 season 1: 840 experiments from TAMIL NADU/2024-25/ML_2.0_TN_2024-25 - v2.xlsx
+[2026-11-24 14:31:50,087] 153 root - INFO - TAMIL NADU 2024-25 season 4: 720 experiments from TAMIL NADU/2024-25/ML_2.0_TN_2024-25 - v2.xlsx
+[2026-11-24 14:31:50,087] 153 root - INFO - TAMIL NADU 2025-26 season 1: 1060 experiments from TAMIL NADU/2025-26/ML_2.0_TN_2025-26.xlsx
+[2026-11-24 14:31:50,087] 153 root - INFO - TAMIL NADU 2025-26 season 4: 920 experiments from TAMIL NADU/2025-26/ML_2.0_TN_2025-26.xlsx
+[2026-11-24 14:31:50,109] 196 root - INFO - BIHAR 2025-26: unchanged (2250 experiments)
+[2026-11-24 14:31:50,129] 196 root - INFO - GUJARAT 2025-26: unchanged (2880 experiments)
+[2026-11-24 14:31:50,147] 218 root - INFO - TAMIL NADU 2024-25: new - 1560 experiments -> 00_database\01_masterlist\TAMIL NADU\2024-25\master_list.csv
+[2026-11-24 14:31:50,169] 218 root - INFO - TAMIL NADU 2025-26: new - 1980 experiments -> 00_database\01_masterlist\TAMIL NADU\2025-26\master_list.csv
+[2026-11-24 14:31:50,286] 315 root - INFO - Check report written: 02_artifacts\01_masterlist\BIHAR\2025-26\ML_check_report_*.csv
+[2026-11-24 14:31:50,290] 315 root - INFO - Check report written: 02_artifacts\01_masterlist\GUJARAT\2025-26\ML_check_report_*.csv
+[2026-11-24 14:31:50,293] 315 root - INFO - Check report written: 02_artifacts\01_masterlist\TAMIL NADU\2024-25\ML_check_report_*.csv
+[2026-11-24 14:31:50,297] 315 root - INFO - Check report written: 02_artifacts\01_masterlist\TAMIL NADU\2025-26\ML_check_report_*.csv
+[2026-11-24 14:31:50,298] 177 root - INFO - Completed ML data ingestion (stored state + years: 4, experiments: 8670)
+[2026-11-24 14:31:50,299] 49 root - INFO - Completed 1. Master List pipeline
+[2026-11-24 14:32:15,357] 53 root - INFO - ML_2_0_BR_2025-26.xlsx: passed - BIHAR 2025-26, 2250 experiments, 0 item(s) cleaned
+[2026-11-24 14:32:26,758] 53 root - INFO - Error_ML_2_0_BR_2026-27.xlsx: passed - BIHAR 2026-27, 2250 experiments, 1 item(s) cleaned
+[2026-11-24 14:32:36,572] 151 root - INFO - Copied Error_ML_2_0_BR_2026-27.xlsx -> 01_raw_data\01_masterlist\BIHAR\2026-27\Error_ML_2_0_BR_2026-27.xlsx
+[2026-11-24 14:32:36,574] 33 root - INFO - Starting 1. Master List pipeline
+[2026-11-24 14:32:36,574] 36 root - INFO - Input path: 01_raw_data\01_masterlist
+[2026-11-24 14:32:36,575] 37 root - INFO - Output folder: 02_artifacts\01_masterlist/<STATE>/<YEAR>/
+[2026-11-24 14:32:36,575] 59 root - INFO - Entered Method create_directories
+[2026-11-24 14:32:36,575] 63 root - INFO - Directory created: 02_artifacts\01_masterlist
+[2026-11-24 14:32:36,575] 64 root - INFO - Exited Method create_directories
+[2026-11-24 14:32:36,575] 122 root - INFO - Starting ML data ingestion (KrishiSoft checks, lenient, state / year wise)
+[2026-11-24 14:32:36,576] 113 root - INFO - Discovered 5 Excel files in 01_raw_data\01_masterlist (with sub-folders)
+[2026-11-24 14:32:37,093] 134 root - INFO - BIHAR/2025-26/ML_2_0_BR_2025-26.xlsx: OK - BIHAR 2025-26, 2250 experiments, 0 item(s) cleaned
+[2026-11-24 14:32:37,703] 134 root - INFO - GUJARAT/2025-26/ML_2025-26_v5.xlsx: OK - GUJARAT 2025-26, 2880 experiments, 0 item(s) cleaned
+[2026-11-24 14:32:38,010] 134 root - INFO - TAMIL NADU/2024-25/ML_2.0_TN_2024-25 - v2.xlsx: OK - TAMIL NADU 2024-25, 1560 experiments, 28 item(s) cleaned
+[2026-11-24 14:32:38,475] 134 root - INFO - TAMIL NADU/2025-26/ML_2.0_TN_2025-26.xlsx: OK - TAMIL NADU 2025-26, 1980 experiments, 32 item(s) cleaned
+[2026-11-24 14:32:38,924] 134 root - INFO - BIHAR/2026-27/Error_ML_2_0_BR_2026-27.xlsx: OK - BIHAR 2026-27, 2250 experiments, 1 item(s) cleaned
+[2026-11-24 14:32:38,933] 153 root - INFO - BIHAR 2025-26 season 2: 540 experiments from BIHAR/2025-26/ML_2_0_BR_2025-26.xlsx
+[2026-11-24 14:32:38,934] 153 root - INFO - BIHAR 2025-26 season 3: 590 experiments from BIHAR/2025-26/ML_2_0_BR_2025-26.xlsx
+[2026-11-24 14:32:38,934] 153 root - INFO - BIHAR 2025-26 season 4: 1040 experiments from BIHAR/2025-26/ML_2_0_BR_2025-26.xlsx
+[2026-11-24 14:32:38,934] 153 root - INFO - BIHAR 2025-26 season 5: 80 experiments from BIHAR/2025-26/ML_2_0_BR_2025-26.xlsx
+[2026-11-24 14:32:38,935] 153 root - INFO - BIHAR 2026-27 season 2: 540 experiments from BIHAR/2026-27/Error_ML_2_0_BR_2026-27.xlsx
+[2026-11-24 14:32:38,935] 153 root - INFO - BIHAR 2026-27 season 3: 590 experiments from BIHAR/2026-27/Error_ML_2_0_BR_2026-27.xlsx
+[2026-11-24 14:32:38,936] 153 root - INFO - BIHAR 2026-27 season 4: 1040 experiments from BIHAR/2026-27/Error_ML_2_0_BR_2026-27.xlsx
+[2026-11-24 14:32:38,936] 153 root - INFO - BIHAR 2026-27 season 5: 80 experiments from BIHAR/2026-27/Error_ML_2_0_BR_2026-27.xlsx
+[2026-11-24 14:32:38,936] 153 root - INFO - GUJARAT 2025-26 season 1: 2270 experiments from GUJARAT/2025-26/ML_2025-26_v5.xlsx
+[2026-11-24 14:32:38,936] 153 root - INFO - GUJARAT 2025-26 season 4: 510 experiments from GUJARAT/2025-26/ML_2025-26_v5.xlsx
+[2026-11-24 14:32:38,936] 153 root - INFO - GUJARAT 2025-26 season 5: 100 experiments from GUJARAT/2025-26/ML_2025-26_v5.xlsx
+[2026-11-24 14:32:38,937] 153 root - INFO - TAMIL NADU 2024-25 season 1: 840 experiments from TAMIL NADU/2024-25/ML_2.0_TN_2024-25 - v2.xlsx
+[2026-11-24 14:32:38,937] 153 root - INFO - TAMIL NADU 2024-25 season 4: 720 experiments from TAMIL NADU/2024-25/ML_2.0_TN_2024-25 - v2.xlsx
+[2026-11-24 14:32:38,937] 153 root - INFO - TAMIL NADU 2025-26 season 1: 1060 experiments from TAMIL NADU/2025-26/ML_2.0_TN_2025-26.xlsx
+[2026-11-24 14:32:38,937] 153 root - INFO - TAMIL NADU 2025-26 season 4: 920 experiments from TAMIL NADU/2025-26/ML_2.0_TN_2025-26.xlsx
+[2026-11-24 14:32:38,961] 196 root - INFO - BIHAR 2025-26: unchanged (2250 experiments)
+[2026-11-24 14:32:38,985] 218 root - INFO - BIHAR 2026-27: new - 2250 experiments -> 00_database\01_masterlist\BIHAR\2026-27\master_list.csv
+[2026-11-24 14:32:39,005] 196 root - INFO - GUJARAT 2025-26: unchanged (2880 experiments)
+[2026-11-24 14:32:39,017] 196 root - INFO - TAMIL NADU 2024-25: unchanged (1560 experiments)
+[2026-11-24 14:32:39,031] 196 root - INFO - TAMIL NADU 2025-26: unchanged (1980 experiments)
+[2026-11-24 14:32:39,162] 315 root - INFO - Check report written: 02_artifacts\01_masterlist\BIHAR\2025-26\ML_check_report_*.csv
+[2026-11-24 14:32:39,165] 315 root - INFO - Check report written: 02_artifacts\01_masterlist\GUJARAT\2025-26\ML_check_report_*.csv
+[2026-11-24 14:32:39,169] 315 root - INFO - Check report written: 02_artifacts\01_masterlist\TAMIL NADU\2024-25\ML_check_report_*.csv
+[2026-11-24 14:32:39,173] 315 root - INFO - Check report written: 02_artifacts\01_masterlist\TAMIL NADU\2025-26\ML_check_report_*.csv
+[2026-11-24 14:32:39,177] 315 root - INFO - Check report written: 02_artifacts\01_masterlist\BIHAR\2026-27\ML_check_report_*.csv
+[2026-11-24 14:32:39,178] 177 root - INFO - Completed ML data ingestion (stored state + years: 5, experiments: 10920)
+[2026-11-24 14:32:39,180] 49 root - INFO - Completed 1. Master List pipeline
+[2026-11-24 14:33:40,655] 53 root - INFO - ML_2.0_BR_2025-26.xlsx: passed - BIHAR 2025-26, 2030 experiments, 0 item(s) cleaned
+[2026-11-24 14:33:52,234] 151 root - INFO - Copied ML_2.0_BR_2025-26.xlsx -> 01_raw_data\01_masterlist\BIHAR\2025-26\ML_2.0_BR_2025-26.xlsx
+[2026-11-24 14:33:52,237] 33 root - INFO - Starting 1. Master List pipeline
+[2026-11-24 14:33:52,237] 36 root - INFO - Input path: 01_raw_data\01_masterlist
+[2026-11-24 14:33:52,237] 37 root - INFO - Output folder: 02_artifacts\01_masterlist/<STATE>/<YEAR>/
+[2026-11-24 14:33:52,238] 59 root - INFO - Entered Method create_directories
+[2026-11-24 14:33:52,238] 63 root - INFO - Directory created: 02_artifacts\01_masterlist
+[2026-11-24 14:33:52,238] 64 root - INFO - Exited Method create_directories
+[2026-11-24 14:33:52,238] 122 root - INFO - Starting ML data ingestion (KrishiSoft checks, lenient, state / year wise)
+[2026-11-24 14:33:52,239] 113 root - INFO - Discovered 6 Excel files in 01_raw_data\01_masterlist (with sub-folders)
+[2026-11-24 14:33:52,879] 134 root - INFO - BIHAR/2025-26/ML_2_0_BR_2025-26.xlsx: OK - BIHAR 2025-26, 2250 experiments, 0 item(s) cleaned
+[2026-11-24 14:33:53,408] 134 root - INFO - GUJARAT/2025-26/ML_2025-26_v5.xlsx: OK - GUJARAT 2025-26, 2880 experiments, 0 item(s) cleaned
+[2026-11-24 14:33:53,825] 134 root - INFO - TAMIL NADU/2024-25/ML_2.0_TN_2024-25 - v2.xlsx: OK - TAMIL NADU 2024-25, 1560 experiments, 28 item(s) cleaned
+[2026-11-24 14:33:54,257] 134 root - INFO - TAMIL NADU/2025-26/ML_2.0_TN_2025-26.xlsx: OK - TAMIL NADU 2025-26, 1980 experiments, 32 item(s) cleaned
+[2026-11-24 14:33:54,690] 134 root - INFO - BIHAR/2026-27/Error_ML_2_0_BR_2026-27.xlsx: OK - BIHAR 2026-27, 2250 experiments, 1 item(s) cleaned
+[2026-11-24 14:33:56,457] 134 root - INFO - BIHAR/2025-26/ML_2.0_BR_2025-26.xlsx: OK - BIHAR 2025-26, 2030 experiments, 0 item(s) cleaned
+[2026-11-24 14:33:56,466] 153 root - INFO - BIHAR 2025-26 season 2: 420 experiments from BIHAR/2025-26/ML_2.0_BR_2025-26.xlsx
+[2026-11-24 14:33:56,466] 153 root - INFO - BIHAR 2025-26 season 3: 580 experiments from BIHAR/2025-26/ML_2.0_BR_2025-26.xlsx
+[2026-11-24 14:33:56,467] 153 root - INFO - BIHAR 2025-26 season 4: 920 experiments from BIHAR/2025-26/ML_2.0_BR_2025-26.xlsx
+[2026-11-24 14:33:56,467] 153 root - INFO - BIHAR 2025-26 season 5: 110 experiments from BIHAR/2025-26/ML_2.0_BR_2025-26.xlsx
+[2026-11-24 14:33:56,468] 153 root - INFO - BIHAR 2026-27 season 2: 540 experiments from BIHAR/2026-27/Error_ML_2_0_BR_2026-27.xlsx
+[2026-11-24 14:33:56,468] 153 root - INFO - BIHAR 2026-27 season 3: 590 experiments from BIHAR/2026-27/Error_ML_2_0_BR_2026-27.xlsx
+[2026-11-24 14:33:56,468] 153 root - INFO - BIHAR 2026-27 season 4: 1040 experiments from BIHAR/2026-27/Error_ML_2_0_BR_2026-27.xlsx
+[2026-11-24 14:33:56,469] 153 root - INFO - BIHAR 2026-27 season 5: 80 experiments from BIHAR/2026-27/Error_ML_2_0_BR_2026-27.xlsx
+[2026-11-24 14:33:56,469] 153 root - INFO - GUJARAT 2025-26 season 1: 2270 experiments from GUJARAT/2025-26/ML_2025-26_v5.xlsx
+[2026-11-24 14:33:56,469] 153 root - INFO - GUJARAT 2025-26 season 4: 510 experiments from GUJARAT/2025-26/ML_2025-26_v5.xlsx
+[2026-11-24 14:33:56,469] 153 root - INFO - GUJARAT 2025-26 season 5: 100 experiments from GUJARAT/2025-26/ML_2025-26_v5.xlsx
+[2026-11-24 14:33:56,470] 153 root - INFO - TAMIL NADU 2024-25 season 1: 840 experiments from TAMIL NADU/2024-25/ML_2.0_TN_2024-25 - v2.xlsx
+[2026-11-24 14:33:56,470] 153 root - INFO - TAMIL NADU 2024-25 season 4: 720 experiments from TAMIL NADU/2024-25/ML_2.0_TN_2024-25 - v2.xlsx
+[2026-11-24 14:33:56,470] 153 root - INFO - TAMIL NADU 2025-26 season 1: 1060 experiments from TAMIL NADU/2025-26/ML_2.0_TN_2025-26.xlsx
+[2026-11-24 14:33:56,470] 153 root - INFO - TAMIL NADU 2025-26 season 4: 920 experiments from TAMIL NADU/2025-26/ML_2.0_TN_2025-26.xlsx
+[2026-11-24 14:33:56,470] 155 root - INFO - 2250 row(s) of older files replaced by a newer file of the same season
+[2026-11-24 14:33:56,509] 218 root - INFO - BIHAR 2025-26: replaced (old list in backup) - 2030 experiments -> 00_database\01_masterlist\BIHAR\2025-26\master_list.csv; backup 05_backup\01_masterlist\BIHAR\2025-26\2026-11-24_143356
+[2026-11-24 14:33:56,526] 196 root - INFO - BIHAR 2026-27: unchanged (2250 experiments)
+[2026-11-24 14:33:56,545] 196 root - INFO - GUJARAT 2025-26: unchanged (2880 experiments)
+[2026-11-24 14:33:56,556] 196 root - INFO - TAMIL NADU 2024-25: unchanged (1560 experiments)
+[2026-11-24 14:33:56,569] 196 root - INFO - TAMIL NADU 2025-26: unchanged (1980 experiments)
+[2026-11-24 14:33:56,696] 315 root - INFO - Check report written: 02_artifacts\01_masterlist\BIHAR\2025-26\ML_check_report_*.csv
+[2026-11-24 14:33:56,700] 315 root - INFO - Check report written: 02_artifacts\01_masterlist\GUJARAT\2025-26\ML_check_report_*.csv
+[2026-11-24 14:33:56,704] 315 root - INFO - Check report written: 02_artifacts\01_masterlist\TAMIL NADU\2024-25\ML_check_report_*.csv
+[2026-11-24 14:33:56,707] 315 root - INFO - Check report written: 02_artifacts\01_masterlist\TAMIL NADU\2025-26\ML_check_report_*.csv
+[2026-11-24 14:33:56,711] 315 root - INFO - Check report written: 02_artifacts\01_masterlist\BIHAR\2026-27\ML_check_report_*.csv
+[2026-11-24 14:33:56,712] 177 root - INFO - Completed ML data ingestion (stored state + years: 5, experiments: 10700)
+[2026-11-24 14:33:56,714] 49 root - INFO - Completed 1. Master List pipeline
+[2026-11-24 14:34:40,647] 53 root - INFO - Error_ML_2_0_BR_2026-27.xlsx: passed - BIHAR 2026-27, 2250 experiments, 1 item(s) cleaned
+[2026-11-24 14:37:27,952] 151 root - INFO - Copied F110020408352_8Jun2026_C4BR02WHEAT_HYI0422025-26.mdb -> 01_raw_data\02_importschedules\MDB\BIHAR\2025-26\F110020408352_8Jun2026_C4BR02WHEAT_HYI0422025-26.mdb
+[2026-11-24 14:37:27,954] 35 root - INFO - Starting 2. Import Schedules pipeline
+[2026-11-24 14:37:27,954] 45 root - INFO - Input path: 01_raw_data\02_importschedules
+[2026-11-24 14:37:27,955] 46 root - INFO - Output path: 02_artifacts\02_importschedules\ingested_sch.csv
+[2026-11-24 14:37:27,955] 47 root - INFO - DGCES sample: not given (DGCES files skipped)
+[2026-11-24 14:37:27,955] 59 root - INFO - Entered Method create_directories
+[2026-11-24 14:37:27,955] 63 root - INFO - Directory created: 02_artifacts\02_importschedules
+[2026-11-24 14:37:27,955] 64 root - INFO - Exited Method create_directories
+[2026-11-24 14:37:27,956] 299 root - INFO - Entered ingest_data method of ImportSchedules class
+[2026-11-24 14:37:27,956] 91 root - INFO - Discovered 1 schedule files in 01_raw_data\02_importschedules (with sub-folders)
+[2026-11-24 14:37:28,291] 227 root - INFO - Loaded MDB/BIHAR/2025-26/F110020408352_8Jun2026_C4BR02WHEAT_HYI0422025-26.mdb: 1 RC-7 rows, 13 block tables
+[2026-11-24 14:37:28,306] 335 root - INFO - Exited ingest_data method of ImportSchedules class (RC-7 rows: 1, block tables: 13, DGCES experiments: 0)
+[2026-11-24 14:37:28,307] 58 root - INFO - Saved RC-7 data to 02_artifacts\02_importschedules\ingested_sch.csv (shape: (1, 67))
+[2026-11-24 14:37:28,309] 361 root - INFO - Saved mdb/Sch20Block1.csv (1 rows)
+[2026-11-24 14:37:28,310] 361 root - INFO - Saved mdb/Sch20Block2.csv (1 rows)
+[2026-11-24 14:37:28,311] 361 root - INFO - Saved mdb/Sch20Block3.csv (2 rows)
+[2026-11-24 14:37:28,312] 361 root - INFO - Saved mdb/Sch20Block4.csv (2 rows)
+[2026-11-24 14:37:28,313] 361 root - INFO - Saved mdb/Sch20Block5p1.csv (1 rows)
+[2026-11-24 14:37:28,313] 361 root - INFO - Saved mdb/Sch20Block6.csv (1 rows)
+[2026-11-24 14:37:28,314] 361 root - INFO - Saved mdb/Sch20Block7.csv (1 rows)
+[2026-11-24 14:37:28,315] 361 root - INFO - Saved mdb/Sch20Block8P1.csv (3 rows)
+[2026-11-24 14:37:28,316] 361 root - INFO - Saved mdb/Sch20Block8P2.csv (2 rows)
+[2026-11-24 14:37:28,317] 361 root - INFO - Saved mdb/Sch20Block9P1.csv (2 rows)
+[2026-11-24 14:37:28,318] 361 root - INFO - Saved mdb/Sch20Block9P2.csv (6 rows)
+[2026-11-24 14:37:28,318] 361 root - INFO - Saved mdb/Sch20Block10.csv (1 rows)
+[2026-11-24 14:37:28,319] 361 root - INFO - Saved mdb/Sch20Block12.csv (1 rows)
+[2026-11-24 14:37:28,320] 361 root - INFO - Saved mdb/Sch20RC7.csv (1 rows)
+[2026-11-24 14:37:28,321] 361 root - INFO - Saved clubbed/Sch20RC7.csv (1 rows)
+[2026-11-24 14:37:28,322] 361 root - INFO - Saved clubbed/Sch20Block1.csv (1 rows)
+[2026-11-24 14:37:28,323] 361 root - INFO - Saved clubbed/Sch20Block2.csv (1 rows)
+[2026-11-24 14:37:28,324] 361 root - INFO - Saved clubbed/Sch20Block3.csv (2 rows)
+[2026-11-24 14:37:28,325] 361 root - INFO - Saved clubbed/Sch20Block4.csv (2 rows)
+[2026-11-24 14:37:28,326] 361 root - INFO - Saved clubbed/Sch20Block5p1.csv (1 rows)
+[2026-11-24 14:37:28,327] 361 root - INFO - Saved clubbed/Sch20Block6.csv (1 rows)
+[2026-11-24 14:37:28,327] 361 root - INFO - Saved clubbed/Sch20Block7.csv (1 rows)
+[2026-11-24 14:37:28,328] 361 root - INFO - Saved clubbed/Sch20Block8P1.csv (3 rows)
+[2026-11-24 14:37:28,329] 361 root - INFO - Saved clubbed/Sch20Block8P2.csv (2 rows)
+[2026-11-24 14:37:28,330] 361 root - INFO - Saved clubbed/Sch20Block9P1.csv (2 rows)
+[2026-11-24 14:37:28,331] 361 root - INFO - Saved clubbed/Sch20Block9P2.csv (6 rows)
+[2026-11-24 14:37:28,332] 361 root - INFO - Saved clubbed/Sch20Block10.csv (1 rows)
+[2026-11-24 14:37:28,332] 361 root - INFO - Saved clubbed/Sch20Block12.csv (1 rows)
+[2026-11-24 14:37:28,335] 393 root - INFO - Schedule ingestion report written: 02_artifacts\02_importschedules\report
+[2026-11-24 14:37:28,335] 61 root - INFO - Completed 2. Import Schedules pipeline

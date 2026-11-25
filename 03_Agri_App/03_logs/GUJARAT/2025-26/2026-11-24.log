@@ -1,0 +1,44 @@
+[2026-11-24 17:58:43,587] 53 root - INFO - Starting 1. Import Schedules pipeline for GUJARAT 2025-26
+[2026-11-24 17:58:43,588] 429 root - INFO - Entered ingest_data method of ImportSchedules class
+[2026-11-24 17:58:43,589] 129 root - INFO - Discovered 1 schedule files in 01_raw_data\01_importschedules\GUJARAT\2025-26 (with sub-folders)
+[2026-11-24 17:58:44,328] 321 root - INFO - Loaded MDB/GJ_NSSAS2025.mdb: 2882 RC-7 rows, 14 block tables
+[2026-11-24 17:58:44,412] 435 root - INFO - Files: 1 read, 0 unchanged (taken from the cache)
+[2026-11-24 17:58:44,415] 444 root - INFO - Removed 2 duplicate UID rows inside one file
+[2026-11-24 17:58:44,474] 469 root - INFO - Exited ingest_data method of ImportSchedules class (RC-7 rows: 2872, block tables: 14, DGCES experiments: 0)
+[2026-11-24 17:58:44,494] 80 root - INFO - Saved RC-7 of GUJARAT 2025-26: 2872 rows
+[2026-11-24 17:58:44,501] 495 root - INFO - Saved mdb/Sch20Block1.csv (2874 rows)
+[2026-11-24 17:58:44,507] 495 root - INFO - Saved mdb/Sch20Block2.csv (2755 rows)
+[2026-11-24 17:58:44,514] 495 root - INFO - Saved mdb/Sch20Block3.csv (5510 rows)
+[2026-11-24 17:58:44,519] 495 root - INFO - Saved mdb/Sch20Block4.csv (5470 rows)
+[2026-11-24 17:58:44,525] 495 root - INFO - Saved mdb/Sch20Block5p1.csv (2714 rows)
+[2026-11-24 17:58:44,537] 495 root - INFO - Saved mdb/Sch20Block5p2.csv (11864 rows)
+[2026-11-24 17:58:44,541] 495 root - INFO - Saved mdb/Sch20Block6.csv (2755 rows)
+[2026-11-24 17:58:44,544] 495 root - INFO - Saved mdb/Sch20Block7.csv (2755 rows)
+[2026-11-24 17:58:44,554] 495 root - INFO - Saved mdb/Sch20Block8P1.csv (8265 rows)
+[2026-11-24 17:58:44,564] 495 root - INFO - Saved mdb/Sch20Block8P2.csv (5510 rows)
+[2026-11-24 17:58:44,570] 495 root - INFO - Saved mdb/Sch20Block9P1.csv (5510 rows)
+[2026-11-24 17:58:44,588] 495 root - INFO - Saved mdb/Sch20Block9P2.csv (16530 rows)
+[2026-11-24 17:58:44,591] 495 root - INFO - Saved mdb/Sch20Block10.csv (2757 rows)
+[2026-11-24 17:58:44,597] 495 root - INFO - Saved mdb/Sch20Block12.csv (2772 rows)
+[2026-11-24 17:58:44,614] 495 root - INFO - Saved mdb/Sch20RC7.csv (2872 rows)
+[2026-11-24 17:58:44,631] 495 root - INFO - Saved clubbed/Sch20RC7.csv (2872 rows)
+[2026-11-24 17:58:44,638] 495 root - INFO - Saved clubbed/Sch20Block1.csv (2874 rows)
+[2026-11-24 17:58:44,644] 495 root - INFO - Saved clubbed/Sch20Block2.csv (2755 rows)
+[2026-11-24 17:58:44,651] 495 root - INFO - Saved clubbed/Sch20Block3.csv (5510 rows)
+[2026-11-24 17:58:44,657] 495 root - INFO - Saved clubbed/Sch20Block4.csv (5470 rows)
+[2026-11-24 17:58:44,661] 495 root - INFO - Saved clubbed/Sch20Block5p1.csv (2714 rows)
+[2026-11-24 17:58:44,675] 495 root - INFO - Saved clubbed/Sch20Block5p2.csv (11864 rows)
+[2026-11-24 17:58:44,678] 495 root - INFO - Saved clubbed/Sch20Block6.csv (2755 rows)
+[2026-11-24 17:58:44,681] 495 root - INFO - Saved clubbed/Sch20Block7.csv (2755 rows)
+[2026-11-24 17:58:44,692] 495 root - INFO - Saved clubbed/Sch20Block8P1.csv (8265 rows)
+[2026-11-24 17:58:44,701] 495 root - INFO - Saved clubbed/Sch20Block8P2.csv (5510 rows)
+[2026-11-24 17:58:44,707] 495 root - INFO - Saved clubbed/Sch20Block9P1.csv (5510 rows)
+[2026-11-24 17:58:44,725] 495 root - INFO - Saved clubbed/Sch20Block9P2.csv (16530 rows)
+[2026-11-24 17:58:44,728] 495 root - INFO - Saved clubbed/Sch20Block10.csv (2757 rows)
+[2026-11-24 17:58:44,735] 495 root - INFO - Saved clubbed/Sch20Block12.csv (2772 rows)
+[2026-11-24 17:58:44,744] 548 root - INFO - Schedule ingestion report written: 02_artifacts\01_importschedules\GUJARAT\2025-26\report
+[2026-11-24 17:58:44,745] 133 root - INFO - Import log: 1 file(s) -> 02_artifacts\01_importschedules\GUJARAT\2025-26\report\Last_import.csv; history 02_artifacts\01_importschedules\GUJARAT\2025-26\import_history.csv
+[2026-11-24 17:58:44,746] 84 root - INFO - Completed 1. Import Schedules pipeline for GUJARAT 2025-26
+[2026-11-24 20:41:32,824] 37 root - INFO - 7. RC-7 Validation GUJARAT 2025-26: {'Schedules': 2872, 'Corrections proposed': 10006, 'Problems': 379}
+  proposed: [('NEXP', 2872), ('NEXNR', 2872), ('EQSW', 1966), ('NIRR', 757), ('E1', 90), ('E2', 90), ('E9', 90), ('E10', 90), ('E3', 90), ('SVARC', 90), ('E4', 90), ('E5', 90), ('IRRP', 90), ('E6', 90), ('CODN', 90), ('CODP', 90), ('CODK', 90), ('E7', 90), ('E8', 90), ('E15', 90), ('CCE', 80), ('E14', 13), ('SEEDR', 2), ('CROPER', 2), ('QTN', 1), ('QTP', 1)]
+  problems: [('Invalid code.', 218), ('Yield is more than 18500', 37), ('Yield is more than 10000', 34), ("Conversion factor is not filled – save this crop's area sheet in 5. Estimates (the CCF comes from it) or type it here", 30), ('Yield is more than 4000', 26), ('Yield is more than 14000', 12), ('Yield is more than 8000', 10), ('Yield is more than 21000', 5), ('Seed ratio is more than 15', 3), ('Yield is more than 15000', 2), ('Seed ratio is more than 140', 1), ('Yield is more than 23000', 1)]

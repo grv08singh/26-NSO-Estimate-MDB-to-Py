@@ -1,0 +1,13 @@
+﻿Crop,Planned,Checked at harvest,% response,Estimated yield (kg/ha),% SE
+Jowar (3),80,78,97.5,0.0,
+Bajra (5),50,42,84.0,0.0,
+Maize (6),50,48,96.0,0.0,
+Redgram (11),70,69,98.57,0.0,
+Cotton (12),20,16,80.0,1278.24,36.4
+Sugarcane (14),70,69,98.57,0.0,
+Groundnut (15),70,70,100.0,0.0,
+Gingelly (33),40,18,45.0,0.0,
+Cotton (55),50,48,96.0,0.0,
+Paddy (91),60,51,85.0,0.0,
+Paddy (92),80,78,97.5,0.0,
+All crops,640,587,91.72,34.84,

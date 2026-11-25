@@ -1,0 +1,2 @@
+﻿Import run,File,Source,State,Year,File name,Imported on,Type,Rows (RC-7 / DGCES experiments),Result,Why / details
+2026-11-24 17:58:44,MDB/GJ_NSSAS2025.mdb,MDB,GUJARAT,2025-26,GJ_NSSAS2025.mdb,2026-11-24 16:09,mdb,2874,Imported,"14 block table(s); left out (other states / years): GUJARAT 2024-25: 6, TAMIL NADU 2025-26: 2"

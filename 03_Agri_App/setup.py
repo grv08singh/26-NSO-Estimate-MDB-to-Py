@@ -31,8 +31,8 @@ setup(
     version=VERSION,
     author=AUTHOR,
     author_email=AUTHOR_EMAIL,
-    package_dir={"": "src"},
-    packages=find_packages(where="src"),
+    package_dir={"": "04_src"},
+    packages=find_packages(where="04_src"),
     install_requires=get_requirements("requirements.txt"),
     python_requires=">=3.8",
 )

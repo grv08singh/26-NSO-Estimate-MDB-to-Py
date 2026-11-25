@@ -1,0 +1,51 @@
+[2026-11-23 22:57:21,037] 35 root - INFO - Starting Schedule Ingestion pipeline
+[2026-11-23 22:57:21,037] 42 root - INFO - Input path: 01_raw_data\r1_RawSchedules
+[2026-11-23 22:57:21,037] 43 root - INFO - Output path: artifacts\a2_ingested_sch\ingested_sch.csv
+[2026-11-23 22:57:21,037] 44 root - INFO - DGCES sample: 1
+[2026-11-23 22:57:21,037] 59 root - INFO - Entered Method create_directories
+[2026-11-23 22:57:21,037] 63 root - INFO - Directory created: artifacts\a2_ingested_sch
+[2026-11-23 22:57:21,037] 64 root - INFO - Exited Method create_directories
+[2026-11-23 22:57:21,037] 296 root - INFO - Entered ingest_data method of SchIngestion class
+[2026-11-23 22:57:21,037] 93 root - INFO - Discovered 4 schedule files in 01_raw_data\r1_RawSchedules
+[2026-11-23 22:57:21,146] 187 src.components.dgces_rc7.loader - INFO - Read 86 S rows and 86 PW rows from 01_raw_data\r1_RawSchedules\DGCES_DataSharedToNSO_Revised.xlsx
+[2026-11-23 22:57:21,182] 281 root - INFO - DGCES DGCES_DataSharedToNSO_Revised.xlsx: 86 experiments (0 without PW row), sample Central; EXPTID waits for the order of selection; 180 issue(s)
+[2026-11-23 22:57:21,937] 224 root - INFO - Loaded NSSAS2024.mdb: 1620 RC-7 rows, 14 block tables
+[2026-11-23 22:57:22,465] 224 root - INFO - Loaded NSSAS2025.mdb: 1947 RC-7 rows, 14 block tables
+[2026-11-23 22:57:22,636] 224 root - INFO - Loaded F110020408352_8Jun2026_C4BR02WHEAT_HYI0422025-26.mdb: 1 RC-7 rows, 13 block tables
+[2026-11-23 22:57:22,642] 307 root - INFO - Removed 2 duplicate UID rows inside one file
+[2026-11-23 22:57:22,738] 332 root - INFO - Exited ingest_data method of SchIngestion class (RC-7 rows: 3566, block tables: 14, DGCES experiments: 86)
+[2026-11-23 22:57:22,765] 55 root - INFO - Saved RC-7 data to artifacts\a2_ingested_sch\ingested_sch.csv (shape: (3566, 67))
+[2026-11-23 22:57:22,774] 348 root - INFO - Saved blocks/Sch20Block1.csv (3480 rows)
+[2026-11-23 22:57:22,781] 348 root - INFO - Saved blocks/Sch20Block2.csv (3440 rows)
+[2026-11-23 22:57:22,789] 348 root - INFO - Saved blocks/Sch20Block3.csv (6880 rows)
+[2026-11-23 22:57:22,795] 348 root - INFO - Saved blocks/Sch20Block4.csv (6836 rows)
+[2026-11-23 22:57:22,801] 348 root - INFO - Saved blocks/Sch20Block5p1.csv (3404 rows)
+[2026-11-23 22:57:22,809] 348 root - INFO - Saved blocks/Sch20Block5p2.csv (7248 rows)
+[2026-11-23 22:57:22,812] 348 root - INFO - Saved blocks/Sch20Block6.csv (3440 rows)
+[2026-11-23 22:57:22,816] 348 root - INFO - Saved blocks/Sch20Block7.csv (3440 rows)
+[2026-11-23 22:57:22,828] 348 root - INFO - Saved blocks/Sch20Block8P1.csv (10320 rows)
+[2026-11-23 22:57:22,840] 348 root - INFO - Saved blocks/Sch20Block8P2.csv (6880 rows)
+[2026-11-23 22:57:22,847] 348 root - INFO - Saved blocks/Sch20Block9P1.csv (6880 rows)
+[2026-11-23 22:57:22,867] 348 root - INFO - Saved blocks/Sch20Block9P2.csv (20640 rows)
+[2026-11-23 22:57:22,871] 348 root - INFO - Saved blocks/Sch20Block10.csv (3442 rows)
+[2026-11-23 22:57:22,879] 348 root - INFO - Saved blocks/Sch20Block12.csv (3444 rows)
+[2026-11-23 22:57:22,880] 348 root - INFO - Saved dgces/Sch20Block1.csv (86 rows)
+[2026-11-23 22:57:22,881] 348 root - INFO - Saved dgces/Sch20Block2.csv (86 rows)
+[2026-11-23 22:57:22,882] 348 root - INFO - Saved dgces/Sch20Block3.csv (172 rows)
+[2026-11-23 22:57:22,882] 348 root - INFO - Saved dgces/Sch20Block3p1.csv (0 rows)
+[2026-11-23 22:57:22,883] 348 root - INFO - Saved dgces/Sch20Block4.csv (172 rows)
+[2026-11-23 22:57:22,884] 348 root - INFO - Saved dgces/Sch20Block5p1.csv (86 rows)
+[2026-11-23 22:57:22,884] 348 root - INFO - Saved dgces/Sch20Block5p2.csv (0 rows)
+[2026-11-23 22:57:22,885] 348 root - INFO - Saved dgces/Sch20Block5p3.csv (0 rows)
+[2026-11-23 22:57:22,885] 348 root - INFO - Saved dgces/Sch20Block6.csv (86 rows)
+[2026-11-23 22:57:22,886] 348 root - INFO - Saved dgces/Sch20Block7.csv (86 rows)
+[2026-11-23 22:57:22,887] 348 root - INFO - Saved dgces/Sch20Block8P1.csv (258 rows)
+[2026-11-23 22:57:22,888] 348 root - INFO - Saved dgces/Sch20Block8P2.csv (172 rows)
+[2026-11-23 22:57:22,889] 348 root - INFO - Saved dgces/Sch20Block9P1.csv (172 rows)
+[2026-11-23 22:57:22,890] 348 root - INFO - Saved dgces/Sch20Block9P2.csv (516 rows)
+[2026-11-23 22:57:22,890] 348 root - INFO - Saved dgces/Sch20Block10.csv (86 rows)
+[2026-11-23 22:57:22,891] 348 root - INFO - Saved dgces/Sch20Block12.csv (86 rows)
+[2026-11-23 22:57:22,892] 348 root - INFO - Saved dgces/Sch20RC7.csv (86 rows)
+[2026-11-23 22:57:22,893] 348 root - INFO - Saved dgces/DGCES_ID.csv (86 rows)
+[2026-11-23 22:57:22,997] 388 root - INFO - Schedule ingestion report written: artifacts\a2_ingested_sch\schedule_ingestion_report.xlsx
+[2026-11-23 22:57:22,997] 58 root - INFO - Completed Schedule Ingestion pipeline
