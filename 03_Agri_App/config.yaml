@@ -4,6 +4,9 @@ backup_root: "05_backup"      # copies made before stored data is replaced, <NN_
 # Under every top folder the module folders are named as the app's tabs: 00_masterlist, 01_importschedules,
 # 03_viewschedule, 02_controlregister, 04_datavalidation, 05_estimates, 06_estimatereport, 07_rc7, 08_annexures (04_src/utils/folders.py).
 
+estimates_report:
+  summary_csv_path: "02_artifacts/06_estimatereport/estimates_summary.csv"  # consolidated summary: Year, State, Season, Sample, Crop, Yield, %SE, Variance, Area
+
 masterlist:
   raw_ML_path: "01_raw_data/00_masterlist"
   ingested_ML_path: "02_artifacts/00_masterlist"   # <STATE>/<YEAR>/ingested_ML.csv, ML_check_report_*.csv, MasterList_Summary_*.csv, errors/

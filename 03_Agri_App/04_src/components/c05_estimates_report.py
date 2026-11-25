@@ -6,6 +6,9 @@ Every sheet: a title, what was estimated (state · year · season · crop · sam
 (bold heading row, thin borders, number formats, bold total row, heading frozen, A4 landscape printing with page
 numbers). The tables are the ones the app shows (c05_estimates.py), so screen and workbook always agree.
 Saved in 02_artifacts/05_estimates/<STATE>/<YEAR>/<Central|State|Combined>/<VARIETY>/<dd.mm.yyyy>/.
+
+Also writes a consolidated summary CSV (configured in config.yaml: estimates_report.summary_csv_path) with columns:
+Year, State code, Season code, Sample code, Crop code, Yield (kg/ha), %SE, Variance, Area (ha).
 """
 from __future__ import annotations
 
@@ -18,6 +21,7 @@ from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
 
 from src.components import c05_estimates as est
+from src.utils.config_loader import load_config
 
 OFFICE = "NSO (FOD), Agricultural Statistics HQ, Faridabad"
 FONT = "Calibri"
@@ -49,6 +53,9 @@ ITEM_FORMATS = {"% SE": "0.0", "SE": "#,##0.00", "SE (kg/ha)": "#,##0.00"}   # I
 TEXT_COLUMNS = {"Crop code", "District code", "Merge district code", "Season", "Sample", "State", "District",
                 "Order of selection", "Expt", "Inspection status", "Rejected", "Seed type", "Irrigation",
                 "Fertiliser", "Manure", "Pesticide", "Crop condition", "Affected by"}
+
+SUMMARY_CSV_COLUMNS = ["Year", "State code", "Season code", "Sample code", "Crop code",
+                       "Yield (kg/ha)", "%SE", "Variance", "Area (ha)"]
 
 
 def _value(v):
@@ -181,3 +188,69 @@ def export(state: str, year: str, sel: est.Selection, nm: dict, inputs: est.Inpu
                     f"{sel.sample_label.title()}.xlsx")
     wb.save(out)
     return out
+
+
+def _summary_csv_path() -> Path:
+    """Get the summary CSV path from config."""
+    config = load_config()
+    path_str = config.get("estimates_report", {}).get("summary_csv_path",
+                                                        "02_artifacts/06_estimatereport/estimates_summary.csv")
+    return Path(path_str)
+
+
+def append_summary_csv(state: str, year: str, sel: est.Selection, nm: dict, res: est.Result, state_code: str = "") -> Path:
+    """
+    Append one row to the consolidated estimates summary CSV.
+    Columns: Year, State code, Season code, Sample code, Crop code, Yield (kg/ha), %SE, Variance, Area (ha)
+    """
+    csv_path = _summary_csv_path()
+    csv_path.parent.mkdir(parents=True, exist_ok=True)
+
+    # Determine season code and crop code from selection
+    season_code = sel.season
+    sample_code = sel.sample_code  # "1", "2", or "12" for combined
+    crop_code = sel.crop_label_code  # e.g., "1600" for combined, or "1611" for single
+
+    # Use state code from master list (STATE column), fallback to state name
+    state_code_val = state_code if state_code else state.upper()
+
+    # Format values
+    yield_val = res.yield_kg_ha
+    pct_se = res.pct_se if res.pct_se != "Not Applicable" else ""
+    variance = res.variance if res.variance != "Not Applicable" else ""
+    area = res.total_area
+
+    row = {
+        "Year": year,
+        "State code": state_code_val,
+        "Season code": season_code,
+        "Sample code": sample_code,
+        "Crop code": crop_code,
+        "Yield (kg/ha)": yield_val,
+        "%SE": pct_se,
+        "Variance": variance,
+        "Area (ha)": area,
+    }
+
+    # Read existing CSV if it exists
+    if csv_path.exists():
+        df = pd.read_csv(csv_path, dtype=str, keep_default_na=False, encoding="utf-8-sig")
+        # Remove any existing row with same key (Year, State, Season, Sample, Crop)
+        mask = ~((df["Year"] == year) &
+                 (df["State code"] == state.upper()) &
+                 (df["Season code"] == season_code) &
+                 (df["Sample code"] == sample_code) &
+                 (df["Crop code"] == crop_code))
+        df = df[mask]
+    else:
+        df = pd.DataFrame(columns=SUMMARY_CSV_COLUMNS)
+
+    # Append new row
+    df = pd.concat([df, pd.DataFrame([row], columns=SUMMARY_CSV_COLUMNS)], ignore_index=True)
+
+    # Write back (atomic)
+    tmp = csv_path.with_suffix(".tmp")
+    df.to_csv(tmp, index=False, encoding="utf-8-sig")
+    tmp.replace(csv_path)
+
+    return csv_path

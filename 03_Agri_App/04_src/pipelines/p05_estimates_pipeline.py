@@ -1,6 +1,8 @@
 """Module 5 pipeline — the Estimates without the app: every estimate whose area sheet is saved (in the app) is worked
 out again from the stored master list and the imported schedules (Data Validation corrections applied), shown on
 screen and in the log; with --export each one is also written as the Excel workbook, as the app's Export button.
+Also writes a consolidated summary CSV (config: estimates_report.summary_csv_path) with:
+Year, State code, Season code, Sample code, Crop code, Yield (kg/ha), %SE, Variance, Area (ha).
 
     python run_step.py 5                       every state + year with saved area sheets
     python run_step.py 5 BIHAR 2025-26         one state + year
@@ -33,6 +35,8 @@ class EstimatesPipeline:
             logging.warning(f"{STAGE_NAME}: no master list or no saved area sheet for {self.state} {self.year}")
             return []
         ml = pd.read_csv(ml_file, dtype=str, keep_default_na=False, encoding="utf-8-sig")
+        # Get state code from master list (STATE column)
+        state_code = ml["STATE"].iloc[0] if len(ml) and "STATE" in ml.columns else self.state
         rc7 = schedules.rc7(self.state, self.year)
         out = []
         for key in saved["KEY"]:
@@ -47,6 +51,8 @@ class EstimatesPipeline:
                    "Planned": len(exps), "Analysed": res.analysed}
             if export:
                 row["Exported to"] = str(report.export(self.state, self.year, sel, nm, inputs, base, res, exps))
+                # Also append to consolidated summary CSV
+                report.append_summary_csv(self.state, self.year, sel, nm, res, state_code)
             for w in res.warnings:
                 logging.warning(f"{STAGE_NAME} {nm['crop']} {sel.sample_label}: {w}")
             out.append(row)
