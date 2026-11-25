@@ -235,9 +235,9 @@ def append_summary_csv(state: str, year: str, sel: est.Selection, nm: dict, res:
     # Read existing CSV if it exists
     if csv_path.exists():
         df = pd.read_csv(csv_path, dtype=str, keep_default_na=False, encoding="utf-8-sig")
-        # Remove any existing row with same key (Year, State, Season, Sample, Crop)
+        # Remove any existing row with same key (Year, State code, Season, Sample, Crop)
         mask = ~((df["Year"] == year) &
-                 (df["State code"] == state.upper()) &
+                 (df["State code"] == state_code_val) &
                  (df["Season code"] == season_code) &
                  (df["Sample code"] == sample_code) &
                  (df["Crop code"] == crop_code))
