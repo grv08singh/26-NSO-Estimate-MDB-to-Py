@@ -52,7 +52,8 @@ class EstimatesPipeline:
             if export:
                 row["Exported to"] = str(report.export(self.state, self.year, sel, nm, inputs, base, res, exps))
                 # Also append to consolidated summary CSV
-                report.append_summary_csv(self.state, self.year, sel, nm, res, state_code)
+                report.append_summary_csv(self.state, self.year, sel, nm, res, state_code,
+                                          inputs.cf, inputs.driage, inputs.recovery)
             for w in res.warnings:
                 logging.warning(f"{STAGE_NAME} {nm['crop']} {sel.sample_label}: {w}")
             out.append(row)

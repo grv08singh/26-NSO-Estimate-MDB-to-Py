@@ -573,7 +573,8 @@ class EstimatesTab(SamplePicker, StepTab):
             # Also append to consolidated summary CSV
             ml = master_list(sc, all_seasons=True)
             state_code = ml["STATE"].iloc[0] if len(ml) and "STATE" in ml.columns else sc.state
-            report.append_summary_csv(sc.state, sc.year, self.sel, self.nm, self.result, state_code)
+            report.append_summary_csv(sc.state, sc.year, self.sel, self.nm, self.result, state_code,
+                                      inputs.cf, inputs.driage, inputs.recovery)
         except OSError as e:
             QtWidgets.QMessageBox.warning(self, "Export failed", f"Could not write the Excel file:\n\n{e}")
             return

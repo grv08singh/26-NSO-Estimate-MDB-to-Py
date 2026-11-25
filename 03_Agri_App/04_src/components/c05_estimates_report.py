@@ -55,7 +55,8 @@ TEXT_COLUMNS = {"Crop code", "District code", "Merge district code", "Season", "
                 "Fertiliser", "Manure", "Pesticide", "Crop condition", "Affected by"}
 
 SUMMARY_CSV_COLUMNS = ["Year", "State code", "Season code", "Sample code", "Crop code",
-                       "Yield (kg/ha)", "%SE", "Variance", "Area (ha)"]
+                       "Yield (kg/ha)", "%SE", "Variance", "Area (ha)",
+                       "Conversion factor", "Driage ratio", "Recovery ratio"]
 
 
 def _value(v):
@@ -198,10 +199,12 @@ def _summary_csv_path() -> Path:
     return Path(path_str)
 
 
-def append_summary_csv(state: str, year: str, sel: est.Selection, nm: dict, res: est.Result, state_code: str = "") -> Path:
+def append_summary_csv(state: str, year: str, sel: est.Selection, nm: dict, res: est.Result, state_code: str = "",
+                        cf: float | None = None, driage: float | None = None, recovery: float | None = None) -> Path:
     """
     Append one row to the consolidated estimates summary CSV.
-    Columns: Year, State code, Season code, Sample code, Crop code, Yield (kg/ha), %SE, Variance, Area (ha)
+    Columns: Year, State code, Season code, Sample code, Crop code, Yield (kg/ha), %SE, Variance, Area (ha),
+             Conversion factor, Driage ratio, Recovery ratio
     """
     csv_path = _summary_csv_path()
     csv_path.parent.mkdir(parents=True, exist_ok=True)
@@ -230,6 +233,9 @@ def append_summary_csv(state: str, year: str, sel: est.Selection, nm: dict, res:
         "%SE": pct_se,
         "Variance": variance,
         "Area (ha)": area,
+        "Conversion factor": cf if cf is not None else "",
+        "Driage ratio": driage if driage is not None else "",
+        "Recovery ratio": recovery if recovery is not None else "",
     }
 
     # Read existing CSV if it exists
