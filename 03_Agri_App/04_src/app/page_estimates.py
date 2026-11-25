@@ -19,6 +19,7 @@ from src.components import c05_estimates as est
 from src.components import c05_estimates_report as report
 from src.utils import folders as F
 from src.utils import schedules
+from src.utils.config_loader import load_config
 
 from .look import fit_columns, AutoLabel, Table, button, flow_box, label, toast
 from .qt import QtCore, QtGui, QtWidgets, Qt
@@ -569,6 +570,10 @@ class EstimatesTab(SamplePicker, StepTab):
                 self.status.setText(self._status_base + f" · saved {inputs.saved_on}")
             self.result = est.calculate(self.base, inputs)
             out = report.export(sc.state, sc.year, self.sel, self.nm, inputs, self.base, self.result, self.exps)
+            # Also append to consolidated summary CSV
+            ml = master_list(sc, all_seasons=True)
+            state_code = ml["STATE"].iloc[0] if len(ml) and "STATE" in ml.columns else sc.state
+            report.append_summary_csv(sc.state, sc.year, self.sel, self.nm, self.result, state_code)
         except OSError as e:
             QtWidgets.QMessageBox.warning(self, "Export failed", f"Could not write the Excel file:\n\n{e}")
             return
