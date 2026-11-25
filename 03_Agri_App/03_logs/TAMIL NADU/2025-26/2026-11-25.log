@@ -1,0 +1,27 @@
+[2026-11-25 16:15:10,732] 57 root - INFO - 5. Estimates TAMIL NADU 2025-26:
+Season         Crop  Sample  Yield (kg/ha)  Variance     SE  %SE    Area  Planned  Analysed                                                                                                                     Exported to
+KHARIF  COTTON_UI_A CENTRAL         1005.0   11351.0 106.54 10.6 58451.0       16        14   02_artifacts\05_estimates\TAMIL NADU\2025-26\Central\COTTON_UI_A\25.11.2026\2026-11-25_161510_KHARIF_COTTON_UI_A_Central.xlsx
+KHARIF  COTTON_UI_A   STATE         1043.0   15300.0 123.69 11.9 51998.0        8         8       02_artifacts\05_estimates\TAMIL NADU\2025-26\State\COTTON_UI_A\25.11.2026\2026-11-25_161510_KHARIF_COTTON_UI_A_State.xlsx
+KHARIF GROUNDNUT_UI CENTRAL         2416.0   19603.0 140.01  5.8  3806.0       58        58 02_artifacts\05_estimates\TAMIL NADU\2025-26\Central\GROUNDNUT_UI\25.11.2026\2026-11-25_161510_KHARIF_GROUNDNUT_UI_Central.xlsx
+[2026-11-25 16:15:32,015] 57 root - INFO - 5. Estimates TAMIL NADU 2025-26:
+Season         Crop  Sample  Yield (kg/ha)  Variance     SE  %SE    Area  Planned  Analysed                                                                                                                     Exported to
+KHARIF  COTTON_UI_A CENTRAL         1005.0   11351.0 106.54 10.6 58451.0       16        14   02_artifacts\05_estimates\TAMIL NADU\2025-26\Central\COTTON_UI_A\25.11.2026\2026-11-25_161531_KHARIF_COTTON_UI_A_Central.xlsx
+KHARIF  COTTON_UI_A   STATE         1043.0   15300.0 123.69 11.9 51998.0        8         8       02_artifacts\05_estimates\TAMIL NADU\2025-26\State\COTTON_UI_A\25.11.2026\2026-11-25_161531_KHARIF_COTTON_UI_A_State.xlsx
+KHARIF GROUNDNUT_UI CENTRAL         2416.0   19603.0 140.01  5.8  3806.0       58        58 02_artifacts\05_estimates\TAMIL NADU\2025-26\Central\GROUNDNUT_UI\25.11.2026\2026-11-25_161531_KHARIF_GROUNDNUT_UI_Central.xlsx
+[2026-11-25 16:22:13,489] 59 root - INFO - 5. Estimates TAMIL NADU 2025-26:
+Season         Crop  Sample  Yield (kg/ha)  Variance     SE  %SE    Area  Planned  Analysed                                                                                                                     Exported to
+KHARIF  COTTON_UI_A CENTRAL         1005.0   11351.0 106.54 10.6 58451.0       16        14   02_artifacts\05_estimates\TAMIL NADU\2025-26\Central\COTTON_UI_A\25.11.2026\2026-11-25_162213_KHARIF_COTTON_UI_A_Central.xlsx
+KHARIF  COTTON_UI_A   STATE         1043.0   15300.0 123.69 11.9 51998.0        8         8       02_artifacts\05_estimates\TAMIL NADU\2025-26\State\COTTON_UI_A\25.11.2026\2026-11-25_162213_KHARIF_COTTON_UI_A_State.xlsx
+KHARIF GROUNDNUT_UI CENTRAL         2416.0   19603.0 140.01  5.8  3806.0       58        58 02_artifacts\05_estimates\TAMIL NADU\2025-26\Central\GROUNDNUT_UI\25.11.2026\2026-11-25_162213_KHARIF_GROUNDNUT_UI_Central.xlsx
+[2026-11-25 16:29:17,686] 59 root - INFO - 5. Estimates TAMIL NADU 2025-26:
+Season         Crop  Sample  Yield (kg/ha)  Variance      SE  %SE    Area  Planned  Analysed                                                                                                                     Exported to
+KHARIF  COTTON_UI_A CENTRAL         1005.0   11351.0  106.54 10.6 58451.0       16        14   02_artifacts\05_estimates\TAMIL NADU\2025-26\Central\COTTON_UI_A\25.11.2026\2026-11-25_162917_KHARIF_COTTON_UI_A_Central.xlsx
+KHARIF  COTTON_UI_A   STATE         1043.0   15300.0  123.69 11.9 51998.0        8         8       02_artifacts\05_estimates\TAMIL NADU\2025-26\State\COTTON_UI_A\25.11.2026\2026-11-25_162917_KHARIF_COTTON_UI_A_State.xlsx
+KHARIF GROUNDNUT_UI CENTRAL         2416.0   19603.0  140.01  5.8  3806.0       58        58 02_artifacts\05_estimates\TAMIL NADU\2025-26\Central\GROUNDNUT_UI\25.11.2026\2026-11-25_162917_KHARIF_GROUNDNUT_UI_Central.xlsx
+KHARIF GROUNDNUT_UI   STATE         8711.0 1283169.0 1132.77 13.0  1455.0       32        29     02_artifacts\05_estimates\TAMIL NADU\2025-26\State\GROUNDNUT_UI\25.11.2026\2026-11-25_162917_KHARIF_GROUNDNUT_UI_State.xlsx
+[2026-11-25 16:43:20,805] 60 root - INFO - 5. Estimates TAMIL NADU 2025-26:
+Season         Crop  Sample  Yield (kg/ha)  Variance      SE  %SE    Area  Planned  Analysed                                                                                                                     Exported to
+KHARIF  COTTON_UI_A CENTRAL         1005.0   11351.0  106.54 10.6 58451.0       16        14   02_artifacts\05_estimates\TAMIL NADU\2025-26\Central\COTTON_UI_A\25.11.2026\2026-11-25_164320_KHARIF_COTTON_UI_A_Central.xlsx
+KHARIF  COTTON_UI_A   STATE         1043.0   15300.0  123.69 11.9 51998.0        8         8       02_artifacts\05_estimates\TAMIL NADU\2025-26\State\COTTON_UI_A\25.11.2026\2026-11-25_164320_KHARIF_COTTON_UI_A_State.xlsx
+KHARIF GROUNDNUT_UI   STATE         8711.0 1283169.0 1132.77 13.0  1455.0       32        29     02_artifacts\05_estimates\TAMIL NADU\2025-26\State\GROUNDNUT_UI\25.11.2026\2026-11-25_164320_KHARIF_GROUNDNUT_UI_State.xlsx
+KHARIF GROUNDNUT_UI CENTRAL         5859.0  106746.0  326.72  5.6  4006.0       58        58 02_artifacts\05_estimates\TAMIL NADU\2025-26\Central\GROUNDNUT_UI\25.11.2026\2026-11-25_164320_KHARIF_GROUNDNUT_UI_Central.xlsx
