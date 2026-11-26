@@ -1,8 +1,0 @@
-numpy
-pandas
-pyodbc
-openpyxl
-ensure
-pyyaml
-joblib
-PySide6

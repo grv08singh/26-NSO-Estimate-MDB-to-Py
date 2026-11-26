@@ -1,4 +1,0 @@
-﻿File,Source,State,Year,File name,Imported on,Type,Rows (RC-7 / DGCES experiments),Result,Why / details
-MDB/F110020408352_8Jun2026_C4BR02WHEAT_HYI0422025-26.mdb,MDB,BIHAR,2025-26,F110020408352_8Jun2026_C4BR02WHEAT_HYI0422025-26.mdb,2026-11-24 14:37,mdb,1,Imported,13 block table(s)
-MDB/BR_NSSAS2025.mdb,MDB,BIHAR,2025-26,BR_NSSAS2025.mdb,2026-11-24 15:53,mdb,1630,Imported,"13 block table(s); left out (other states / years): BIHAR 2019-20: 18, BIHAR 2024-25: 18, TAMIL NADU 2025-26: 2"
-DGCES/DGCES_DataSharedToNSO_Revised.xlsx,DGCES,BIHAR,2025-26,DGCES_DataSharedToNSO_Revised.xlsx,2026-11-24 15:53,DGCES,86,Imported,"86 experiments (0 without PW row), sample Central; EXPTID waits for the order of selection; 180 issue(s)"
