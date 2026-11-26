@@ -10,6 +10,56 @@ uv pip install -r requirements.txt
 
 ---
 
+## Project summary (as of 2026-11-26)
+
+**What it is:** a Windows desktop app (Python 3.13 with a PySide6/Qt window) for crop-cutting survey work at an NSO
+agriculture office. It replaces the office's old MS Access tools (the AS 2.0 `.accdb` files, KrishiSoft_V0.1 and
+KrishiStat). It reads **Schedule 2.0** survey data (`.mdb`/`.accdb` files and DGCES Excel sheets) and produces the
+official outputs: **yield estimates, estimate reports, RC-7 records and annexures**. About 14.4k lines of Python in
+`04_src/`; the git root is the parent folder `26-NSO-Estimate-MDB-to-Py/`.
+
+### Workflow (one module per tab)
+| # | Module | What it does |
+|---|---|---|
+| 00 | Master List | Imports the yearly planned-experiment lists (Excel), runs lenient checks and writes error reports |
+| 1 | Import Schedules | Reads MDB/DGCES files into Schedule 2.0 block CSVs. A per-file `.pkl` cache skips files that haven't changed |
+| 2 | Control Register | Counts planned, received, harvested, missed and lost plots, plus NR (not received) lists exported to Excel |
+| 3 | View Schedule | Fills the `as20.docx` template and prints it to PDF through MS Word |
+| 4 | Data Validation | Yield min/max checks. Edits go to `corrections.csv`, which every later module applies |
+| 5 | Estimates | Area sheet, variance and %SE, then the estimate (Central, State or Combined), exported to Excel |
+| 6 | Estimate Report | Information Accompanying, T-test and the Hindi Confidential Sheet |
+| 7 | RC7 | Old RC-7 validation rules with proposed corrections, a problems list and "Mark final" |
+| 8 | Annexures | Kharif/Rabi report tables in English, Hindi or both |
+
+### Layout
+- `00_database/`: stored state (master lists, corrections, saved area sheets, final RC-7)
+- `01_raw_data/`: copies of the input files · `02_artifacts/`: outputs · `03_logs/`: logs ·
+  `05_backup/`: copies taken before stored data is overwritten
+- Every data folder follows `<module>/<STATE>/<YEAR>/`.
+- Code in `04_src/`: `components/c0N_*.py` (logic), `pipelines/p0N_*.py` (run a module without the window),
+  `app/page_*.py` (UI pages), `utils/schedules.py` (the single place every module reads schedules from).
+- `bootstrap.py` lets the code be imported as `src`, because a Python package name can't start with a digit.
+
+### Data present
+- States and years: Bihar (2025-26, 2026-27), Gujarat (2025-26), Tamil Nadu (2024-25 to 2026-27).
+- Furthest along: Tamil Nadu 2025-26 (saved estimates and a final RC-7).
+- Checked against the office's own estimates: 47 of 61 Tamil Nadu estimates match district by district; Bihar
+  MAIZE_HY Central matches (3,054 kg/ha, %SE 5.5).
+
+### How to run
+- App: `python app.py`, or double-click `run_app.bat` (sets up its own Python in `runtime\` on a PC without one).
+- One module without the window: `python run_step.py <0|1|2|5|6|7|8> [STATE YEAR] [--export]`
+- Importing `.mdb` needs the Microsoft Access Database Engine (x64); View Schedule needs MS Word.
+
+### Open points
+- `.gitignore` excludes only `.venv/`, so raw MDB/Excel files (~44 MB), database CSVs and `.pkl` caches (~29 MB) are
+  committed. Consider ignoring `01_raw_data/`, the `file_cache/` folders, `03_logs/` and `05_backup/`.
+- Empty placeholder files: `main.py`, `04_src/config/configuration.py`, `p03_viewschedule_pipeline.py`,
+  `p04_datavalidation_pipeline.py`.
+- Not covered yet: Kerala's per-tree crops and Tamil Nadu cotton pickings.
+
+---
+
 ## NSO_DGCES_TEST — what was added to this copy
 
 This folder is a copy of `26-NSO-Estimate-MDB-to-Py` (without its git history).
@@ -211,8 +261,41 @@ What goes out with an estimate saved in 5. Estimates (same Season / Crop and Cen
 * Previous-year figures (counts, previous yield and variance, ICS yields of earlier years) are **filled from the app**
   when that year's master list / schedules / saved estimate are in it (tinted on screen); typing over a value keeps the
   typed one. **Save** keeps the typed figures (`00_database/06_estimatereport/<STATE>/<YEAR>/report_inputs.csv`);
-  **Export** writes one workbook (the three sheets) in
+* **Details on yield rate of the 5 previous years** (ICS and CES yield, kg/ha, and %SE – a box each) are saved, all of
+  them (from the app or typed), in `00_database/06_estimatereport/<STATE>/<YEAR>/yield_history.csv`: one row per
+  estimate + year (KEY, SEASON, CROP, SAMPLE, YEAR_BACK 1–5, YEAR, ICS_YIELD, ICS_SE, CES_YIELD, CES_SE, SAVED_ON),
+  written on Save / Export (old copy to `05_backup` first). Shown ONLY from saved yield_history.csv files: this
+  year's file, else for each year the newest earlier year's file that has it (tinted). A year found in none of them
+  stays blank on the screen – type it and Save.
+* **Export** writes one workbook (the three sheets) in
   `02_artifacts/06_estimatereport/<STATE>/<YEAR>/<Central|State|Combined>/<VARIETY>/<dd.mm.yyyy>/`.
+* **Combined & Pooled** tab (`c06_estimatereport_pooled.py`, page `app/page_estimatereport_pooled.py`) – the office's
+  two workbooks `01_raw_data/est_rep_calc/01 Central.xlsx` and `02 State.xlsx` in the app. The crop chosen in the work
+  page gives the crop group (same first two digits in the season: 0611 MAIZE_UI + 0612 MAIZE_IR, 0623 HYBRID + 0624
+  LOCAL; a single code such as 9100 is a group of one, its stratum 2 = 0). Both samples at once (the Sample choice is
+  not used):
+  * **Combined (Central / State)** – "Intermediate Table 4": Yc = (Y1·A1 + Y2·A2) ÷ (A1 + A2),
+    Vc = (A1²·V1 + A2²·V2) ÷ (A1 + A2)², SE = √Vc, %SE = SE × 100 ÷ Yc; T-tests current vs previous year and vs CES.
+  * **Pooled** – Yp = (Y1·V2 + Y2·V1) ÷ (V1 + V2), Vp = V1·V2 ÷ (V1 + V2) (1 = Central, 2 = State); T-tests pooled vs
+    previous pooled, pooled vs CES, Central vs State. t = |round((Y1 − Y2) ÷ √(V1 + V2), 2)|, significant above 1.96;
+    CES variance = (CES × %SE ÷ 100)². Rounding as Excel's ROUND (half away from zero).
+  * **Confidential Sheet** – conf('C), conf('S), conf('P) (केन्द्रीय, राज्य, एकीकृत): yield (%SE), previous year, CES,
+    % differences with * when significant, planned, analysed, % response.
+  * Filled from the app (tinted; typing wins): Y, V, A (= total area) and analysed of each stratum from the estimates
+    saved in 5. Estimates, planned from the master list, previous year (and previous pooled) worked out the same way
+    from last year's saved estimates, Hindi names from the master list. CES and anything else is typed. **Save figures**
+    → `00_database/06_estimatereport/<STATE>/<YEAR>/pooled_inputs.csv` (one row per season + crop group).
+  * **Export workbook** – the office's six sheets (comb('c), conf('C), comb('S), conf('S), pool(p), conf('P)) with
+    live formulas and their layout, in `02_artifacts/06_estimatereport/<STATE>/<YEAR>/Pooled/<CROP>/<dd.mm.yyyy>/`.
+    Template `04_src/resources/est_rep_pooled.xlsx`, made from the office's files by `04_src/utils/make_pooled_template.py`
+    (run it again if their layout changes). Changes from the office's files: links between the two files are inside
+    one workbook; a missing figure gives "N.A." (the office's T-test cells said "Significant" and put a * when the
+    previous year / CES was missing, because Excel compares the text "N.A." as greater than 1.96); previous-year %SE
+    with 2 decimals in every sheet (the pooled sheet had 1); one office name in every letter.
+  * Checked: Tamil Nadu 2024-25 Kharif maize (the office's example) – every figure of the six sheets identical, in the
+    app and in the exported workbook recalculated by Excel.
+  * `run_step.py 6 [STATE YEAR] [--export]` also lists (and exports) Combined & Pooled for each crop group with a saved
+    estimate.
 
 ### 7. RC7 (`c07_rc7.py`, page `app/page_rc7.py`, `pipelines/p07_rc7_pipeline.py`)
 The crop cutting record (RC-7) of the open state + year: the old `RC7 <year>.accdb` validation (DataValidation20) and the

@@ -16,6 +16,7 @@ from src.utils import folders as F
 from src.utils import schedules
 
 from .look import fit_columns, Table, button, label, toast
+from .page_estimatereport_pooled import PooledPanel
 from .page_estimates import NUM, SamplePicker, _box, _fmt, _show, _validator
 from .qt import QtGui, QtWidgets, Qt
 from .window import ART, StepTab
@@ -104,9 +105,9 @@ class EstimateReportTab(SamplePicker, StepTab):
         field("CES YEAR", "CES year", rule="", hint="e.g. 2024-25")
         field("PREVIOUS YIELD", "Previous year yield")
         field("PREVIOUS VARIANCE", "Previous year variance")
-        g.addWidget(label("Details on yield rate (kg/ha)", "h3"), r, 0, 1, 3)
+        g.addWidget(label("Details on yield rate (kg/ha) – saved in yield_history.csv", "h3"), r, 0, 1, 3)
         r += 1
-        for c, t in enumerate(("Year", "ICS yield (SE%)", "CES yield (SE%)")):
+        for c, t in enumerate(("Year", "ICS yield · %SE", "CES yield · %SE")):
             g.addWidget(label(t, "muted", wrap=False), r, c)
         r += 1
         self.year_labels = []
@@ -114,11 +115,17 @@ class EstimateReportTab(SamplePicker, StepTab):
             lab = QtWidgets.QLabel("")
             self.year_labels.append(lab)
             g.addWidget(lab, r, 0)
-            for c, k in ((1, f"ICS {i}"), (2, f"CES {i}")):
-                b = _box(130, "", "e.g. 2210 (3.4)", right=False)
-                b.textEdited.connect(self._edited)
-                self.fields[k] = b
-                g.addWidget(b, r, c)
+            for c, kind in ((1, "ICS"), (2, "CES")):
+                pair = QtWidgets.QWidget()
+                pl = QtWidgets.QHBoxLayout(pair)
+                pl.setContentsMargins(0, 0, 0, 0)
+                pl.setSpacing(4)
+                for k, w, hint in ((f"{kind} {i}", 72, "yield"), (f"{kind} SE {i}", 52, "%SE")):
+                    b = _box(w, NUM, hint)
+                    b.textEdited.connect(self._edited)
+                    self.fields[k] = b
+                    pl.addWidget(b)
+                g.addWidget(pair, r, c)
             r += 1
         g.addWidget(label("Submission", "h3"), r, 0, 1, 3)
         r += 1
@@ -149,19 +156,32 @@ class EstimateReportTab(SamplePicker, StepTab):
         cl.addWidget(self.conf_view, 1)
         for w, name in ((info, "Information Accompanying"), (self.tt_view, "T-test"), (conf, "Confidential Sheet")):
             self.body.addTab(w, name)
+        # the office's Central / State / Pooled workbooks: both samples of the crop, so the Sample choice is not used
+        self.pooled = PooledPanel(self)
+        self.body.addTab(self.pooled, "Combined && Pooled")
+        self.body.currentChanged.connect(self._tab_changed)
         self._enable(False)
+
+    def _tab_changed(self, _i: int) -> None:
+        """Save / Export in the header are for the per-estimate sheets; the Combined & Pooled tab has its own."""
+        on_pooled = self.body.currentWidget() is self.pooled
+        for b in (self.b_save, self.b_export):
+            b.setVisible(not on_pooled)
 
     # ------------------------------------------------------------------ refresh
     def _stamps(self) -> tuple:
         sc = self.scope
         files = [est.folder(sc.state, sc.year) / est.INPUTS_FILE, est.folder(sc.state, sc.year) / est.AREAS_FILE,
-                 er.folder(sc.state, sc.year) / er.INPUTS_FILE]
+                 er.folder(sc.state, sc.year) / er.INPUTS_FILE, er.folder(sc.state, sc.year) / er.HISTORY_FILE,
+                 *(er.folder(sc.state, er.previous_year(sc.year, i)) / er.HISTORY_FILE
+                   for i in range(1, er.YEARS_BACK + 1))]
         return tuple(f.stat().st_mtime_ns if f.exists() else 0 for f in files)
 
     def refresh(self) -> None:
         sc = self.scope
         if not sc.ok:
             return
+        self.pooled.refresh(sc.state, sc.year, self._season(), sc.crop)
         sel = self._selection()
         key = (sc.state, sc.year, sel, schedules.stamp(sc.state, sc.year), self._stamps())
         if key == self._key:
@@ -170,7 +190,8 @@ class EstimateReportTab(SamplePicker, StepTab):
             if QtWidgets.QMessageBox.question(
                     self, "Not saved", "The figures typed for the estimate shown before are not saved. Save them now? "
                     "(No = discard them)") == QtWidgets.QMessageBox.StandardButton.Yes:
-                er.save_typed(sc.state, sc.year, self.sel, self._typed())
+                er.save_typed(sc.state, sc.year, self.sel, self._typed(), er.history_values(self.rep),
+                              self.rep.nm["crop"])
                 key = key[:4] + (self._stamps(),)
         self._key, self._dirty, self.sel = key, False, sel
         self.rep = er.build(sc.state, sc.year, sel) if sel is not None else None
@@ -313,7 +334,8 @@ class EstimateReportTab(SamplePicker, StepTab):
         if self.rep is None:
             return False
         try:
-            er.save_typed(sc.state, sc.year, self.sel, self._typed())
+            er.save_typed(sc.state, sc.year, self.sel, self._typed(), er.history_values(self.rep),
+                          self.rep.nm["crop"])
         except OSError as e:
             QtWidgets.QMessageBox.critical(self, "Not saved", f"The figures could not be saved:\n\n{e}")
             return False

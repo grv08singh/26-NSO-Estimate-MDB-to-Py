@@ -10,7 +10,9 @@
 
 The estimate itself comes from 5. Estimates (its saved area sheet for the same selection). Previous-year figures are
 filled from the app when last year's master list / schedules / saved estimate are in it; anything typed wins.
-Typed figures: 00_database/06_estimatereport/<STATE>/<YEAR>/report_inputs.csv. Export: one Excel workbook in
+Typed figures: 00_database/06_estimatereport/<STATE>/<YEAR>/report_inputs.csv; the details on yield rate of the 5
+previous years (ICS and CES yield, %SE – from the app or typed, all of them): yield_history.csv in the same folder,
+one row per estimate + year (next year's report starts from it). Export: one Excel workbook in
 02_artifacts/06_estimatereport/<STATE>/<YEAR>/<Central|State|Combined>/<VARIETY>/<dd.mm.yyyy>/.
 """
 from __future__ import annotations
@@ -51,9 +53,15 @@ CLASS_HEADS = ["0–1,000", "1,001–5,000", "5,001–10,000", "10,001–15,000"
                "Above 25,000"]
 
 TYPED = (["CES YIELD", "CES %SE", "CES YEAR", "PREVIOUS YIELD", "PREVIOUS VARIANCE", "DUE DATE", "SUBMISSION DATE"]
-         + [f"ICS {i}" for i in range(1, YEARS_BACK + 1)] + [f"CES {i}" for i in range(1, YEARS_BACK + 1)]
          + [f"PREV {c}" for c in COUNTS])
 INPUT_COLUMNS = ["KEY", *TYPED, "SAVED_ON"]
+
+# Details on yield rate: ICS and CES yield (kg/ha) and %SE of the 5 previous years – their own CSV, one row per
+# estimate + year: 00_database/06_estimatereport/<STATE>/<YEAR>/yield_history.csv
+HISTORY_FILE = "yield_history.csv"
+HISTORY_FIELDS = {"ICS": "ICS_YIELD", "ICS SE": "ICS_SE", "CES": "CES_YIELD", "CES SE": "CES_SE"}
+HISTORY_COLUMNS = ["KEY", "SEASON", "CROP", "SAMPLE", "YEAR_BACK", "YEAR", *HISTORY_FIELDS.values(), "SAVED_ON"]
+HISTORY = [f"{f} {i}" for i in range(1, YEARS_BACK + 1) for f in HISTORY_FIELDS]     # value keys, e.g. 'ICS SE 3'
 
 
 def previous_year(year: str, back: int = 1) -> str:
@@ -108,33 +116,84 @@ def folder(state: str, year: str) -> Path:
     return DB / state / year
 
 
-def load_typed(state: str, year: str, sel: est.Selection) -> dict[str, str]:
-    f = folder(state, year) / INPUTS_FILE
+def _read(f: Path, cols: list[str]) -> pd.DataFrame:
     if not f.exists():
-        return {}
-    df = pd.read_csv(f, dtype=str, keep_default_na=False, encoding="utf-8-sig").reindex(columns=INPUT_COLUMNS,
-                                                                                         fill_value="")
-    row = df[df["KEY"] == sel.key]
-    return {k: v for k, v in row.iloc[0].items() if k in TYPED and v} if len(row) else {}
+        return pd.DataFrame(columns=cols)
+    return pd.read_csv(f, dtype=str, keep_default_na=False, encoding="utf-8-sig").reindex(columns=cols, fill_value="")
 
 
-def save_typed(state: str, year: str, sel: est.Selection, typed: dict[str, str]) -> None:
-    """Replace this selection's row of report_inputs.csv (old copy to 05_backup first)."""
-    d = folder(state, year)
-    d.mkdir(parents=True, exist_ok=True)
-    f = d / INPUTS_FILE
+def _write(f: Path, df: pd.DataFrame, state: str, year: str, stamp: str) -> None:
+    """Write a CSV of the store (old copy to 05_backup/…/<stamp>/ first)."""
+    f.parent.mkdir(parents=True, exist_ok=True)
     if f.exists():
-        b = BACKUP / state / year / f"{datetime.now():%Y-%m-%d_%H%M%S}"
+        b = BACKUP / state / year / stamp
         b.mkdir(parents=True, exist_ok=True)
         shutil.copy2(f, b / f.name)
-        df = pd.read_csv(f, dtype=str, keep_default_na=False, encoding="utf-8-sig")
-    else:
-        df = pd.DataFrame(columns=INPUT_COLUMNS)
-    row = {"KEY": sel.key, **{k: typed.get(k, "") for k in TYPED}, "SAVED_ON": f"{datetime.now():%Y-%m-%d %H:%M:%S}"}
-    df = pd.concat([df[df["KEY"] != sel.key], pd.DataFrame([row])], ignore_index=True).reindex(columns=INPUT_COLUMNS)
     tmp = f.with_suffix(".tmp")
     df.to_csv(tmp, index=False, encoding="utf-8-sig")
     tmp.replace(f)
+
+
+def load_history(state: str, year: str, key: str) -> dict[str, str]:
+    """The 5 previous years saved for an estimate (yield_history.csv), as value keys ('ICS 1', 'CES SE 2' …)."""
+    df = _read(folder(state, year) / HISTORY_FILE, HISTORY_COLUMNS)
+    out = {}
+    for r in df[df["KEY"] == key].itertuples(index=False):
+        for f, col in HISTORY_FIELDS.items():
+            if getattr(r, col):
+                out[f"{f} {r.YEAR_BACK}"] = getattr(r, col)
+    return out
+
+
+def history_by_year(state: str, year: str, key: str) -> dict[str, dict[str, str]]:
+    """The same rows by calendar year: {'2022-23': {'ICS': '2210', 'ICS SE': '3.4', …}}."""
+    df = _read(folder(state, year) / HISTORY_FILE, HISTORY_COLUMNS)
+    return {r.YEAR: {f: getattr(r, col) for f, col in HISTORY_FIELDS.items() if getattr(r, col)}
+            for r in df[df["KEY"] == key].itertuples(index=False)}
+
+
+def saved_history(state: str, year: str, key: str) -> dict[str, str]:
+    """Details on yield rate of the 5 previous years, ONLY from saved yield_history.csv files: for each of those years
+    the newest earlier report that has it (e.g. for 2025-26, year 2022-23 from the 2024-25 file, else the 2023-24
+    file …). Nothing found = blank on the screen, to be typed and saved. This year's own file wins (load_typed)."""
+    out: dict[str, str] = {}
+    for back in range(1, YEARS_BACK + 1):                     # the reports of the earlier years, newest first
+        rows = history_by_year(state, previous_year(year, back), key)
+        for i in range(1, YEARS_BACK + 1):
+            for f, v in rows.get(previous_year(year, i), {}).items():
+                out.setdefault(f"{f} {i}", v)
+    return out
+
+
+def load_typed(state: str, year: str, sel: est.Selection) -> dict[str, str]:
+    """Saved figures: report_inputs.csv (typed) + yield_history.csv (the 5 previous years)."""
+    df = _read(folder(state, year) / INPUTS_FILE, INPUT_COLUMNS)
+    row = df[df["KEY"] == sel.key]
+    out = {k: v for k, v in row.iloc[0].items() if k in TYPED and v} if len(row) else {}
+    out.update(load_history(state, year, sel.key))
+    return out
+
+
+def save_typed(state: str, year: str, sel: est.Selection, typed: dict[str, str],
+               history: dict[str, str] | None = None, crop: str = "") -> None:
+    """Replace this selection's row of report_inputs.csv and, with `history` (every value of the 5-year table, from
+    the app or typed), its 5 rows of yield_history.csv. Old copies to 05_backup first."""
+    now = datetime.now()
+    stamp, saved_on = f"{now:%Y-%m-%d_%H%M%S}", f"{now:%Y-%m-%d %H:%M:%S}"
+    f = folder(state, year) / INPUTS_FILE
+    df = _read(f, INPUT_COLUMNS)
+    row = {"KEY": sel.key, **{k: typed.get(k, "") for k in TYPED}, "SAVED_ON": saved_on}
+    df = pd.concat([df[df["KEY"] != sel.key], pd.DataFrame([row])], ignore_index=True).reindex(columns=INPUT_COLUMNS)
+    _write(f, df, state, year, stamp)
+    if history is None:
+        return
+    f = folder(state, year) / HISTORY_FILE
+    df = _read(f, HISTORY_COLUMNS)
+    rows = [{"KEY": sel.key, "SEASON": sel.season, "CROP": crop, "SAMPLE": sel.sample_label, "YEAR_BACK": str(i),
+             "YEAR": previous_year(year, i), **{col: history.get(f"{fl} {i}", "") for fl, col in HISTORY_FIELDS.items()},
+             "SAVED_ON": saved_on} for i in range(1, YEARS_BACK + 1)]
+    df = pd.concat([df[df["KEY"] != sel.key], pd.DataFrame(rows, columns=HISTORY_COLUMNS)], ignore_index=True)
+    _write(f, df.sort_values(["KEY", "YEAR_BACK"], key=lambda s: s.str.zfill(3)), state, year, stamp)
 
 
 # ------------------------------------------------------------------ the report
@@ -169,12 +228,6 @@ class Report:
         return f"{code}{self.sel.season}{self.sel.sample_code}{self.sel.crop_label_code}{self.year}"
 
 
-def _yield_se(res: est.Result | None) -> str:
-    if res is None:
-        return ""
-    return f"{res.yield_kg_ha:g} ({res.pct_se})" if not isinstance(res.pct_se, str) else f"{res.yield_kg_ha:g}"
-
-
 def build(state: str, year: str, sel: est.Selection) -> Report | None:
     """The report of a selection, or None when 5. Estimates has no saved estimate for it."""
     now = year_estimate(state, year, sel)
@@ -189,10 +242,7 @@ def build(state: str, year: str, sel: est.Selection) -> Report | None:
             auto["PREVIOUS YIELD"] = f"{prev.result.yield_kg_ha:g}"
             if not isinstance(prev.result.variance, str):
                 auto["PREVIOUS VARIANCE"] = f"{prev.result.variance:g}"
-    for i in range(1, YEARS_BACK + 1):                 # ICS yields (SE%) of the previous years saved in the app
-        y = prev if i == 1 else year_estimate(state, previous_year(year, i), sel)
-        if y is not None and y.result is not None:
-            auto[f"ICS {i}"] = _yield_se(y.result)
+    auto.update(saved_history(state, year, sel.key))
     return Report(state, year, sel, nm, now, prev, auto, load_typed(state, year, sel))
 
 
@@ -203,9 +253,17 @@ def _pct(n, total) -> int | str:
     return round(n * 100 / total) if n is not None and total else ""
 
 
+def history_values(rep: Report) -> dict[str, str]:
+    """Every value of the 5-year table as shown (from the app or typed) – what yield_history.csv keeps."""
+    return {k: rep.value(k) for k in HISTORY if rep.value(k)}
+
+
 def yield_rate_table(rep: Report) -> pd.DataFrame:
-    return pd.DataFrame([{"Year": previous_year(rep.year, i), "ICS yield (SE%)": rep.value(f"ICS {i}"),
-                          "CES yield (SE%)": rep.value(f"CES {i}")} for i in range(1, YEARS_BACK + 1)])
+    def pair(i, f):
+        y, se = rep.value(f"{f} {i}"), rep.value(f"{f} SE {i}")
+        return f"{y} ({se})" if y and se else y
+    return pd.DataFrame([{"Year": previous_year(rep.year, i), "ICS yield (SE%)": pair(i, "ICS"),
+                          "CES yield (SE%)": pair(i, "CES")} for i in range(1, YEARS_BACK + 1)])
 
 
 def receipt_table(rep: Report) -> pd.DataFrame:
